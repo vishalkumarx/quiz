@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+	</script>
+	
+	
+     <style>
+        .tab{
+            margin-left: 50px;
+        }
+         
+        td {
+  margin-left: 50 px;
+  border: black solid;
+  font-family:Arial, Verdana, sans-serif;
+  font-size:20px;
+  background-color: darkkhaki;
+}
+p{
+    font-size: 20px;
+}
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+ 
+  cursor: pointer;
+  text-align: left;
+}
+.block:hover {background-color: #a1a1a1}
+
+.block:active {
+  background-color: #b7d5d8;
+ 
+  transform: translateY(4px);
+}
+     </style>
+
+  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Polity Quiz</h1>
+  <p>Check your preparation now!</p> 
+</div>
+  
+
+<script>
+  var mins=10;
+  var secs=mins*60;
+  function countdown() {
+      setTimeout('Decrement()',60);
+  }
+  function Decrement() {
+      if(document.getElementById) {
+          minutes=document.getElementById("minutes");
+          seconds=document.getElementById("seconds");
+          if(seconds<59) {
+              seconds.value=secs;
+          }
+          else {
+              minutes.value=getminutes();
+              seconds.value=getseconds();
+          }
+          if(mins<1) {
+              minutes.style.color="red";
+              seconds.style.color="red";
+          }
+          if(mins<0) {
+              alert('time up');
+              minutes.value=0;
+              seconds.value=0;
+          }
+          else {
+              secs--;
+              setTimeout('Decrement()',1000);
+          }
+      }
+  }
+
+  function getminutes() {
+      mins=Math.floor(secs/60);
+      return mins+" : ";
+  }
+
+  function getseconds() {
+      return secs-Math.round(mins*60);
+  }
+</script>
+<body onload="countdown();">
+  <div style="display: flex; width:80%;
+              justify-content:center; padding-top: 0%;">
+      <label style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;font-size: 20px;">Time Left ::</label>
+  </div>
+  <div style="display: flex; width:80%;
+              justify-content:center; padding-top: 0%;">
+      <input id="minutes" type="text" style="width: 30%;;border: none; font-size: 50px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: bold; color: black;">
+      <font size="5">
+          :
+      </font>
+      <input id="seconds" type="text" style=" width:10%;border: none; font-size: 50px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: bold; color: black;">
+  </div>
+</body>
+</body>
+</html>
