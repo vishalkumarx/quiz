@@ -29,23 +29,25 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: black;
+            /* background-color: black;
             background-image: url('https://unsplash.com/photos/xUXGHzhIbN4');
          
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             background-size: cover;
             background-position: center;
         }
 
         .game-quiz-container {
-            width: 80%;
+            width: 50%;
             height: 30rem;
-            background-color: lightgray;
+            background-color: rgba(255, 255, 255, 0.5);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            border-radius: 30px;
+
         }
 
         .game-details-container {
@@ -67,7 +69,7 @@
             align-items: center;
             justify-content: center;
             border: 2px solid darkgray;
-            border-radius: 25px;
+
         }
 
         .game-question-container h1 {
@@ -89,7 +91,8 @@
             width: 45%;
             height: 3rem;
             border: 2px solid darkgray;
-            border-radius: 20px;
+
+            background-color: rgb(238, 232, 232);
             overflow: hidden;
         }
 
@@ -109,7 +112,7 @@
             -ms-transform: scale(1.12);
             -webkit-transform: scale(1.12);
             transform: scale(1.12);
-            color: white;
+            color: green;
         }
 
         input[type="radio"] {
@@ -119,7 +122,7 @@
 
 
         input[type=radio]:checked~.option {
-            background: paleturquoise;
+            background: gold;
         }
 
         .next-button-container {
@@ -142,32 +145,11 @@
         }
 
         .next-button-container button:hover {
-            background-color: rgb(143, 93, 93);
+            background-color: rgb(107, 208, 132);
         }
 
 
-        .previous-button-container {
-            width: 50%;
-            height: 3rem;
-            display: flex;
-            justify-content: left;
-        }
 
-        .previous-button-container button {
-            width: 8rem;
-            height: 2rem;
-            border-radius: 10px;
-            background: none;
-            color: rgb(25, 25, 25);
-            font-weight: 600;
-            border: 2px solid gray;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .previous-button-container button:hover {
-            background-color: rgb(143, 93, 93);
-        }
 
         .modal-container {
             display: none;
@@ -183,8 +165,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            -webkit-animation: fadeIn 1.2s ease-in-out;
-            animation: fadeIn 1.2s ease-in-out;
+            /* -webkit-animation: fadeIn 1.2s ease-in-out;
+            animation: fadeIn 1.2s ease-in-out; */
         }
 
         .modal-content-container {
@@ -242,6 +224,50 @@
         .modal-button-container button:hover {
             background-color: rgb(83, 82, 82);
         }
+
+        .cookiesContent {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            border-radius: 20px;
+            padding: 30px 30px 70px;
+        }
+
+        button.close {
+            width: 30px;
+            font-size: 20px;
+            color: #c0c5cb;
+            align-self: flex-end;
+            background-color: transparent;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 82px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        button.accept {
+            background-color: #ed6755;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            padding: 14px;
+            font-size: 16px;
+            color: white;
+            box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+        }
+
 
         @media(min-width : 300px) and (max-width : 350px) {
             .game-quiz-container {
@@ -314,24 +340,37 @@
 
 
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
 
-            to {
-                opacity: 1;
-            }
+        .button-88 {
+            display: flex;
+            align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0.7em 1.4em 0.7em 1.1em;
+            color: white;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+            border: none;
+            /* box-shadow: 0 0.7em 1.5em -0.5em #14a73e98; */
+            letter-spacing: 0.05em;
+            border-radius: 20em;
+            cursor: pointer;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
         }
 
-        @-webkit-keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
+        .button-88:hover {
+            box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+            color: black;
 
-            to {
-                opacity: 1;
-            }
+        }
+
+        .button-88:active {
+            box-shadow: 0 0.3em 1em -0.5em #14a73e98;
         }
     </style>
     <script>
@@ -339,27 +378,27 @@
         const questions = [
 
 
-        // {
-        //         question: "",
-                
-        //         optionA: "",
-        //         optionB: "",
-        //         optionC: "",
-        //         optionD: "",
-        //         correctOption: ""
-        //     }  
+            // {
+            //         question: "",
+
+            //         optionA: "",
+            //         optionB: "",
+            //         optionC: "",
+            //         optionD: "",
+            //         correctOption: ""
+            //     }  
             {
                 question: "Reign of Vijaynagar kingdom is: ",
-                
+
                 optionA: "1336-1672 CE",
                 optionB: "1330-1672 CE",
                 optionC: "1456-1689 CE",
                 optionD: "None",
-                correctOption: "optionA" 
-            } ,
+                correctOption: "optionA"
+            },
             {
                 question: "Founder of Vijaynagar kingdom is:",
-                
+
                 optionA: "Harihara",
                 optionB: "Bukka",
                 optionC: "Dev Raya 1",
@@ -368,67 +407,130 @@
             },
             {
                 question: "Main rivals of Vijaynagar kingdom: ",
-                
+
                 optionA: "Sultans of Madurai",
                 optionB: "Bahamani Kingdom",
                 optionC: "Both 1 and 2",
                 optionD: "None of the above",
                 correctOption: "optionC"
-            } ,
+            },
             {
                 question: "Who constructed dam on river Tungbhadra and Haridra",
-                
+
                 optionA: "Deva Raya 2 ",
                 optionB: "Deva Raya 1",
                 optionC: "Harihara 2",
                 optionD: "None of the above",
                 correctOption: "optionB"
             },
-            
+
             {
                 question: "Italian traveller Nicolo Conti and Russian merchant Niktin arrived durint the reign of: ",
-                
+
                 optionA: "Deva Raya 2",
                 optionB: "Harihara 2",
                 optionC: "Krishna Dev Raya",
                 optionD: "Dev Raya 1",
                 correctOption: "optionD"
-            } ,
-            
-            
-                {
+            },
+
+
+            {
                 question: "Who wrote Dharmanathapurana in Kannada on the life of 15th Tiranthkar: ",
-                
+
                 optionA: "Krishna Dev raya",
                 optionB: "Dev Raya 1",
                 optionC: "Achyuta Deva Raya",
                 optionD: "Sada Siv Raya",
                 correctOption: "optionB"
-            } ,
+            },
 
             {
                 question: "Who acquired the title of Gajabetegara, Hunter of elephants: ",
-                
+
                 optionA: "Dev Raya 2",
                 optionB: "Dev Raya 1",
-                optionC: "Krishaa Dev Raya",
+                optionC: "Krishna Dev Raya",
                 optionD: "Sada Shiv Raya",
                 correctOption: "optionA"
-            } ,
+            },
 
             {
                 question: "Hazare Rama Temple built by: ",
-                
+
                 optionA: "Krishna Dev raya",
                 optionB: "Dev Raya 1",
                 optionC: "Achyuta Deva Raya",
                 optionD: "Sada Siv Raya",
                 correctOption: "optionB"
-            } 
+            },
+            {
+                question: "Ashta Diggajas adorned the court of: ",
 
-          //  {
+                optionA: "Dev Raya 1",
+                optionB: "Achutya Dev Raya",
+                optionC: "Sada Siva Raya",
+                optionD: "Krishna Deva Raya ",
+                correctOption: "optionD"
+            },
+
+            {
+                question: "Founder of Suluva Dynasty: ",
+
+                optionA: "Suluva Raya 1",
+                optionB: "Suluva Raya 2",
+                optionC: "Suluva Narsimha",
+                optionD: "Suluva Deva 1",
+                correctOption: "optionC"
+            },
+            {
+                question: "Who is known as Abhinav Bhoja, Andhra Pitamah, Andhra Bhoja",
+
+                optionA: "Krishna Dev Raya ",
+                optionB: "Achutya Dev Raya",
+                optionC: "Sada Siva Raya",
+                optionD: "Deva Raya 1",
+                correctOption: "optionA"
+            },
+            {
+                question: "Portugese travellers Domingo Paes and Barbosa came during the reign of: ",
+
+                optionA: "Dev Raya 1",
+                optionB: "Achutya Dev Raya",
+                optionC: "Sada Siva Raya",
+                optionD: "Krishna Deva Raya ",
+                correctOption: "optionD"
+            },
+            {
+                question: "The famous temple Vittalaswamy and Hazara Ramaswamy was built by: ",
+
+                optionA: "Dev Raya 1",
+                optionB: "Achutya Dev Raya",
+                optionC: "Krishna Dev Raya",
+                optionD: "Sada Siva Raya ",
+                correctOption: "optionC"
+            },
+            {
+                question: "Portugese traveller Fernoa Nuniz came to India during the reign of: ",
+
+                optionA: "Dev Raya 2",
+                optionB: "Achyuta Deva Raya",
+                optionC: "Krishna Deva Raya",
+                optionD: "Sada Shiv Raya",
+                correctOption: "optionB"
+            },
+            {
+                question: "Tiruvengalantha temple was built by: ",
+
+                optionA: "Krishna Dev Raya ",
+                optionB: "Achutya Dev Raya",
+                optionC: "Sada Siva Raya",
+                optionD: "Deva Raya 1",
+                correctOption: "optionB"
+            }
+            //  {
             //     question: "",
-                
+
             //     optionA: "",
             //     optionB: "",
             //     optionC: "",
@@ -439,18 +541,18 @@
         ]
 
 
-        //let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
+        let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
 
-        // function handleQuestions() { 
-        //     //function to shuffle and push 10 questions to shuffledQuestions array
-        // //app would be dealing with 10questions per session
-        //     while (shuffledQuestions.length <= 9) {
-        //         const random = questions[Math.floor(Math.random() * questions.length)]
-        //         if (!shuffledQuestions.includes(random)) {
-        //             shuffledQuestions.push(random)
-        //         }
-        //     }
-        // }
+        function handleQuestions() {
+            //function to shuffle and push 10 questions to shuffledQuestions array
+            //app would be dealing with 10questions per session
+            while (shuffledQuestions.length < questions.length) {
+                const random = questions[Math.floor(Math.random() * questions.length)]
+                if (!shuffledQuestions.includes(random)) {
+                    shuffledQuestions.push(random)
+                }
+            }
+        }
 
 
         let questionNumber = 1 //holds the current question number
@@ -458,14 +560,15 @@
         let wrongAttempt = 0 //amount of wrong answers picked by player
         let indexNumber = 0 //will be used in displaying next question
         let skippedNumber = 0 //will be used in displaying next question
+        let indexAfterResultsNavigation = 0
 
         // function for displaying next question in the array to dom
         //also handles displaying players and quiz information to dom
         function NextQuestion(index) {
-            // handleQuestions()
-            const currentQuestion = questions[index]
-            document.getElementById("question-number").innerHTML = questionNumber +" / "+questions.length
-            document.getElementById("player-score").innerHTML = playerScore +" / "+questions.length
+            handleQuestions()
+            const currentQuestion = shuffledQuestions[index]
+            document.getElementById("question-number").innerHTML = questionNumber + " / " + questions.length
+            document.getElementById("player-score").innerHTML = playerScore + " / " + questions.length
 
             document.getElementById("display-question").innerHTML = currentQuestion.question;
             document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
@@ -477,7 +580,7 @@
 
 
         function checkForAnswer() {
-            const currentQuestion = questions[indexNumber] //gets current Question 
+            const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
             const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
 
             const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
@@ -492,14 +595,14 @@
 
             //checking to make sure a radio input has been checked or an option being chosen
             if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
-                 document.getElementById('option-modal').style.display = "flex"
-                
+                document.getElementById('option-modal').style.display = "flex"
+
             }
 
             //checking if checked radio button is same as answer
             options.forEach((option) => {
                 if (option.checked === true && option.value === currentQuestionAnswer) {
-                    document.getElementById(correctOption).style.backgroundColor = "green"
+                    document.getElementById(correctOption).style.backgroundColor ="#5cd65c"
                     playerScore++ //adding to player's score
                     indexNumber++ //adding 1 to index so has to display next question..
                     //set to delay question number till when next question loads
@@ -511,8 +614,8 @@
 
                 else if (option.checked && option.value !== currentQuestionAnswer) {
                     const wrongLabelId = option.labels[0].id
-                    document.getElementById(wrongLabelId).style.backgroundColor = "red"
-                    document.getElementById(correctOption).style.backgroundColor = "green"
+                    document.getElementById(wrongLabelId).style.backgroundColor = "#ff3333"
+                    document.getElementById(correctOption).style.backgroundColor = "#5cd65c"
                     wrongAttempt++ //adds 1 to wrong attempts 
                     indexNumber++
                     //set to delay question number till when next question loads
@@ -522,8 +625,30 @@
                 }
             })
         }
+        function rgbToHex(col) {
+            if (col.charAt(0) == 'r') {
+                col = col.replace('rgb(', '').replace(')', '').split(',');
+                var r = parseInt(col[0], 10).toString(16);
+                var g = parseInt(col[1], 10).toString(16);
+                var b = parseInt(col[2], 10).toString(16);
+                r = r.length == 1 ? '0' + r : r; g = g.length == 1 ? '0' + g : g; b = b.length == 1 ? '0' + b : b;
+                var colHex = '#' + r + g + b;
+                return colHex;
+            }
+        }
+        function navigateQuestions() {
+            document.getElementById('results').style.display = "flex"
+            document.getElementById('score-modal').style.display = "none"
+            document.getElementById('game-container').style.display = "none"
 
-        function skipQuestion() {
+            const currentQuestion = shuffledQuestions[indexAfterResultsNavigation]
+            document.getElementById("display-question-after").innerHTML = currentQuestion.question;
+            document.getElementById("option-one-label-after").innerHTML = currentQuestion.optionA;
+            document.getElementById("option-one-label-after").disabled = true;
+            document.getElementById("option-two-label-after").innerHTML = currentQuestion.optionB;
+            document.getElementById("option-three-label-after").innerHTML = currentQuestion.optionC;
+            document.getElementById("option-four-label-after").innerHTML = currentQuestion.optionD;
+            indexAfterResultsNavigation++;
 
         }
 
@@ -584,8 +709,8 @@
             //data to display to score board
             // document.getElementById('remarks').innerHTML = remark
             // document.getElementById('remarks').style.color = remarkColor
-            
-            document.getElementById('attempts').innerHTML = (questions.length)- skippedNumber
+
+            document.getElementById('attempts').innerHTML = (questions.length) - skippedNumber
             document.getElementById('grade-percentage').innerHTML = n
             document.getElementById('wrong-answers').innerHTML = wrongAttempt
             document.getElementById('right-answers').innerHTML = playerScore
@@ -608,6 +733,7 @@
         //function to close warning modal
         function closeOptionModal() {
             document.getElementById('option-modal').style.display = "none"
+            navigateQuestions()
         }
     </script>
 
@@ -617,6 +743,7 @@
 
     <body onload="NextQuestion(0)">
         <main>
+            <h1 style="margin-bottom: 100px;">Vijaynagar Kingdom</h1>
             <!-- creating a modal for when quiz ends -->
             <div class="modal-container" id="score-modal">
 
@@ -640,10 +767,10 @@
             </div>
             <!-- end of modal of quiz details-->
 
-            <div class="game-quiz-container">
+            <div class="game-quiz-container" id="game-container">
 
                 <div class="game-details-container">
-                    <h1>Score : <span id="player-score"></span></h1>
+                    <h1 style="color: green;">Score : <span id="player-score"></span></h1>
                     <h1> Question : <span id="question-number"></span></h1>
                 </div>
 
@@ -654,15 +781,20 @@
                 <div class="game-options-container">
 
                     <div class="modal-container" id="option-modal">
-
-                        <div class="modal-content-container">
+                        <div class="cookiesContent" id="cookiesPopup">
+                            <button onclick="closeOptionModal()" class="close">✖</button>
+                            <img src="warning.png" alt="cookies-img" />
+                            <p>Please select an option.</p>
+                            <button onclick="closeOptionModal()" class="accept">Continue!</button>
+                        </div>
+                        <!-- <div class="modal-content-container">
                             <h1>Please Pick An Option</h1>
 
                             <div class="modal-button-container">
                                 <button onclick="closeOptionModal()">Continue</button>
                             </div>
 
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -692,15 +824,18 @@
 
                 </div>
 
-               
 
-                <div class="next-button-container">
-                    <button onclick="handleNextQuestion()">Submit and next</button>
+
+                <div>
+                    <button class="button-88" onclick="handleNextQuestion()">Submit and next</button>
                 </div>
 
             </div>
         </main>
         <!-- <script src="index.js"></script> -->
+
+
+
     </body>
 </body>
 
