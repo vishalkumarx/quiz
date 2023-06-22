@@ -16,309 +16,308 @@ let countdown;
 
 //Questions and Options array
 
-const quizArray = [
-	{
+const quizArray = [ {
 		"id": "1",
 		"question": "In which year did Mahatma Gandhi return to India from South Africa?",
-		"options": ["1914", "1915", "1916", "1917"],
+		"options": ["1910", "1915", "1919", "1924"],
 		"correct": "1915"
 	  },
 	  {
 		"id": "2",
-		"question": "Which was the first major nonviolent protest led by Mahatma Gandhi in India?",
-		"options": ["Champaran Satyagraha", "Dandi March", "Salt Satyagraha", "Quit India Movement"],
+		"question": "What was the name of the movement started by Mahatma Gandhi in 1917 in Champaran district of Bihar?",
+		"options": ["Dandi March", "Quit India Movement", "Champaran Satyagraha", "Non-Cooperation Movement"],
 		"correct": "Champaran Satyagraha"
 	  },
 	  {
 		"id": "3",
-		"question": "In which year did Mahatma Gandhi launch the Non-Cooperation Movement?",
-		"options": ["1919", "1920", "1921", "1922"],
-		"correct": "1920"
-	  },
-	  {
-		"id": "4",
-		"question": "Which famous incident took place at Jallianwala Bagh in Amritsar in 1919?",
-		"options": ["Salt March", "Dandi March", "Jallianwala Bagh massacre", "Chauri Chaura incident"],
+		"question": "Which event led to Mahatma Gandhi launching the Non-Cooperation Movement in 1920?",
+		"options": ["Jallianwala Bagh massacre", "Chauri Chaura incident", "Salt March", "Partition of Bengal"],
 		"correct": "Jallianwala Bagh massacre"
 	  },
 	  {
-		"id": "5",
-		"question": "Which movement was launched by Mahatma Gandhi against the British salt monopoly?",
-		"options": ["Quit India Movement", "Civil Disobedience Movement", "Salt Satyagraha", "Khilafat Movement"],
-		"correct": "Salt Satyagraha"
-	  },
-	  {
-		"id": "6",
-		"question": "Which event led to the suspension of the Non-Cooperation Movement in 1922?",
-		"options": ["Dandi March", "Champaran Satyagraha", "Jallianwala Bagh massacre", "Chauri Chaura incident"],
-		"correct": "Chauri Chaura incident"
-	  },
-	  {
-		"id": "7",
-		"question": "Which movement was launched by Mahatma Gandhi during World War II?",
-		"options": ["Quit India Movement", "Salt Satyagraha", "Civil Disobedience Movement", "Khilafat Movement"],
-		"correct": "Quit India Movement"
-	  },
-	  {
-		"id": "8",
-		"question": "Which famous speech did Mahatma Gandhi deliver at the Round Table Conference in London in 1931?",
-		"options": ["Tryst with Destiny", "Dandi March Speech", "Quit India Speech", "Gandhi-Irwin Pact Speech"],
-		"correct": "Gandhi-Irwin Pact Speech"
-	  },
-	  {
-		"id": "9",
-		"question": "In which year did Mahatma Gandhi participate in the Salt March?",
-		"options": ["1930", "1931", "1932", "1933"],
+		"id": "4",
+		"question": "In which year did Mahatma Gandhi lead the famous Salt March?",
+		"options": ["1929", "1930", "1931", "1932"],
 		"correct": "1930"
 	  },
 	  {
+		"id": "5",
+		"question": "Which movement was launched by Mahatma Gandhi in 1942?",
+		"options": ["Non-Cooperation Movement", "Quit India Movement", "Dandi March", "Civil Disobedience Movement"],
+		"correct": "Quit India Movement"
+	  },
+	  {
+		"id": "6",
+		"question": "Which newspaper was started by Mahatma Gandhi in 1903 in South Africa?",
+		"options": ["Young India", "Indian Opinion", "Harijan", "Navjivan"],
+		"correct": "Indian Opinion"
+	  },
+	  {
+		"id": "7",
+		"question": "What was the name of the ashram established by Mahatma Gandhi in Gujarat in 1915?",
+		"options": ["Sabarmati Ashram", "Sevagram Ashram", "Phoenix Ashram", "Tolstoy Farm"],
+		"correct": "Sabarmati Ashram"
+	  },
+	  {
+		"id": "8",
+		"question": "Which iconic phrase did Mahatma Gandhi use to inspire Indians during the freedom struggle?",
+		"options": ["Do or Die", "Jai Hind", "Swaraj is my birthright", "Satyameva Jayate"],
+		"correct": "Do or Die"
+	  },
+	  {
+		"id": "9",
+		"question": "Who gave the title of 'Mahatma' to Mohandas Karamchand Gandhi?",
+		"options": ["Rabindranath Tagore", "Bal Gangadhar Tilak", "Jawaharlal Nehru", "Sardar Vallabhbhai Patel"],
+		"correct": "Rabindranath Tagore"
+	  },
+	  {
 		"id": "10",
-		"question": "Which event led to the signing of the Gandhi-Irwin Pact in 1931?",
-		"options": ["Salt March", "Dandi March", "Civil Disobedience Movement", "Round Table Conference"],
-		"correct": "Round Table Conference"
+		"question": "Which city was the venue for the historic Gandhi-Irwin Pact signed in 1931?",
+		"options": ["Delhi", "Mumbai", "Chennai", "Kolkata"],
+		"correct": "Delhi"
 	  },
 	  {
 		"id": "11",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the Rowlatt Act in 1919?",
-		"options": ["Non-Cooperation Movement", "Quit India Movement",
-  
-   "Khilafat Movement", "Civil Disobedience Movement"],
-		"correct": "Non-Cooperation Movement"
+		"question": "What was the name of Mahatma Gandhi's autobiography?",
+		"options": ["My Experiments with Truth", "The Story of My Experiments with Truth", "The Autobiography of Mahatma Gandhi", "Gandhi: An Autobiography"],
+		"correct": "The Story of My Experiments with Truth"
 	  },
 	  {
 		"id": "12",
-		"question": "Which famous slogan was coined by Mahatma Gandhi during the Quit India Movement?",
-		"options": ["Do or Die", "Swaraj is my birthright", "Satyameva Jayate", "Inquilab Zindabad"],
-		"correct": "Do or Die"
-	  },
-	  {
-		"id": "13",
-		"question": "Which organization did Mahatma Gandhi establish in 1920 to promote khadi and village industries?",
-		"options": ["Indian National Congress", "All India Trade Union Congress", "Hindustan Socialist Republican Association", "All India Spinners' Association"],
-		"correct": "All India Spinners' Association"
-	  },
-	  {
-		"id": "14",
-		"question": "Which famous event marked the beginning of the Civil Disobedience Movement in 1930?",
-		"options": ["Dandi March", "Quit India Movement", "Jallianwala Bagh massacre", "Champaran Satyagraha"],
-		"correct": "Dandi March"
-	  },
-	  {
-		"id": "15",
-		"question": "Which movement was launched by Mahatma Gandhi in support of the Khilafat movement in 1919?",
-		"options": ["Non-Cooperation Movement", "Salt Satyagraha", "Quit India Movement", "Civil Disobedience Movement"],
-		"correct": "Khilafat Movement"
-	  },
-	  {
-		"id": "16",
-		"question": "Which famous event took place on 30th January 1948?",
-		"options": ["Jallianwala Bagh massacre", "Dandi March", "Salt Satyagraha", "Assassination of Mahatma Gandhi"],
-		"correct": "Assassination of Mahatma Gandhi"
-	  },
-	  {
-		"id": "17",
-		"question": "Which famous agreement did Mahatma Gandhi sign with Lord Irwin in 1931?",
-		"options": ["Tashkent Agreement", "Simla Agreement", "Gandhi-Irwin Pact", "Lahore Agreement"],
-		"correct": "Gandhi-Irwin Pact"
-	  },
-	  {
-		"id": "18",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the British salt tax in 1930?",
-		"options": ["Quit India Movement", "Civil Disobedience Movement", "Salt Satyagraha", "Non-Cooperation Movement"],
+		"question": "Which famous event marked the beginning of Mahatma Gandhi's civil disobedience movement?",
+		"options": ["Dandi March", "Salt Satyagraha", "Bardoli Satyagraha", "Ahmedabad Mill Strike"],
 		"correct": "Salt Satyagraha"
 	  },
 	  {
+		"id": "13",
+		"question": "In which year was Mahatma Gandhi assassinated?",
+		"options": ["1946", "1947", "1948", "1949"],
+		"correct": "1948"
+	  },
+	  {
+		"id": "14",
+		"question": "Which important resolution was passed at the Lahore session of the Indian National Congress in 1929?",
+		"options": ["Resolution on Complete Independence", "Resolution on Non-Violent Non-Cooperation", "Resolution on Poorna Swaraj", "Resolution on Quit India"],
+		"correct": "Resolution on Poorna Swaraj"
+	  },
+	  {
+		"id": "15",
+		"question": "Who was Mahatma Gandhi's wife?",
+		"options": ["Kasturba Gandhi", "Sarojini Naidu", "Indira Gandhi", "Rajkumari Amrit Kaur"],
+		"correct": "Kasturba Gandhi"
+	  },
+	  {
+		"id": "16",
+		"question": "Which famous phrase was coined by Mahatma Gandhi to describe his philosophy of non-violent resistance?",
+		"options": ["Ahimsa", "Satyagraha", "Swadeshi", "Dharma"],
+		"correct": "Satyagraha"
+	  },
+	  {
+		"id": "17",
+		"question": "Which Indian leader was Mahatma Gandhi's mentor and guide during his early years in South Africa?",
+		"options": ["Bal Gangadhar Tilak", "Dadabhai Naoroji", "Gopal Krishna Gokhale", "Motilal Nehru"],
+		"correct": "Gopal Krishna Gokhale"
+	  },
+	  {
+		"id": "18",
+		"question": "Which place did Mahatma Gandhi choose for his first experiment in communal harmony?",
+		"options": ["Noakhali", "Amritsar", "Wardha", "Kolkata"],
+		"correct": "Noakhali"
+	  },
+	  {
 		"id": "19",
-		"question": "Which famous resolution was passed at the Lahore session of the Indian National Congress in 1929?",
-		"options": ["Quit India Resolution", "Purna Swaraj Resolution", "Dandi March Resolution", "Salt Satyagraha Resolution"],
-		"correct": "Purna Swaraj Resolution"
-	  },
-	  {
-		"id": "20",
-		"question": "Which incident inspired Mahatma Gandhi to take up the cause of indigo farmers in Champaran?",
-		"options": ["Jallianwala Bagh massacre", "Chauri Chaura incident", "Kheda Satyagraha", "Plassey incident"],
-		"correct": "Plassey incident"
-	  },
-	  {
-		"id": "21",
-		"question": "In which year did Mahatma Gandhi participate in the Kheda Satyagraha?",
-		"options": ["1915", "1917", "1919", "1922"],
-		"correct": "1918"
-	  },
-	  {
-		"id": "22",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the Rowlatt Act in 1919?",
-		"options": ["Non-Cooperation Movement", "Quit India Movement", "Khilafat Movement", "Civil Disobedience Movement"],
-		"correct": "Non-Cooperation Movement"
-	  },
-	  {
-		"id": "23",
-		"question": "Which famous slogan was coined by Mahatma Gandhi during the Quit India Movement?",
-		"options": ["Do or Die", "Swaraj is my birthright", "Satyameva Jayate", "Inquilab Zindabad"],
-		"correct": "Do or Die"
-	  },
-	  {
-		"id": "24",
-		"question": "Which organization did Mahatma Gandhi establish in 1920 to promote khadi and village industries?",
-		"options": ["Indian National Congress", "All India Trade Union Congress", "Hindustan Socialist Republican Association", "All India Spinners' Association"],
-		"correct": "All India Spinners' Association"
-	  },
-	  {
-		"id": "25",
-		"question": "Which famous event marked the beginning of the Civil Disobedience Movement in 1930?",
-		"options": ["Dandi March", "Quit India Movement", "Jallianwala Bagh massacre", "Champaran Satyagraha"],
-		"correct": "Dandi March"
-	  },
-	  {
-		"id": "26",
-		"question": "Which movement was launched by Mahatma Gandhi in support of the Khilafat movement in 1919?",
-		"options": ["Non-Cooperation Movement", "Salt Satyagraha", "Quit India Movement", "Civil Disobedience Movement"],
+		"question": "Which organization did Mahatma Gandhi form in 1919 to support the cause of peasants and farmers?",
+		"options": ["Indian National Congress", "Khilafat Movement", "All India Traders Association", "Sabarmati Ashram"],
 		"correct": "Khilafat Movement"
 	  },
 	  {
+		"id": "20",
+		"question": "Which important event occurred on 15th August 1947, the same day India gained independence?",
+		"options": ["Mahatma Gandhi's assassination", "Mahatma Gandhi's Dandi March", "Mahatma Gandhi's release from prison", "Mahatma Gandhi's meeting with Winston Churchill"],
+		"correct": "Mahatma Gandhi's release from prison"
+	  },
+	  {
+		"id": "21",
+		"question": "What was the role of Mahatma Gandhi in the Kheda Satyagraha of 1918?",
+		"options": ["He led the protest march", "He organized a nationwide strike", "He provided legal assistance to the farmers", "He started a hunger strike"],
+		"correct": "He provided legal assistance to the farmers"
+	  },
+	  {
+		"id": "22",
+		"question": "Which was the first nationwide movement launched by Mahatma Gandhi in 1919?",
+		"options": ["Quit India Movement", "Non-Cooperation Movement", "Civil Disobedience Movement", "Khilafat Movement"],
+		"correct": "Khilafat Movement"
+	  },
+	  {
+		"id": "23",
+		"question": "What was the purpose of the Dandi March led by Mahatma Gandhi in 1930?",
+		"options": ["To protest against the Simon Commission", "To demand complete independence from British rule", "To boycott foreign goods", "To protest against the Rowlatt Act"],
+		"correct": "To protest against the Salt Tax imposed by the British"
+	  },
+	  {
+		"id": "24",
+		"question": "Who was Mahatma Gandhi's political and spiritual mentor?",
+		"options": ["Bal Gangadhar Tilak", "Gopal Krishna Gokhale", "Rabindranath Tagore", "Sardar Vallabhbhai Patel"],
+		"correct": "Gopal Krishna Gokhale"
+	  },
+	  {
+		"id": "25",
+		"question": "What was the role of Mahatma Gandhi in the Quit India Movement of 1942?",
+		"options": ["He led the movement from the front", "He called for a mass civil disobedience movement", "He initiated the Salt Satyagraha", "He organized the Bardoli Satyagraha"],
+		"correct": "He called for a mass civil disobedience movement"
+	  },
+	  {
+		"id": "26",
+		"question": "Which important resolution was passed at the Congress session in Karachi in 1931?",
+		"options": ["Resolution on Complete Independence", "Resolution on Non-Cooperation", "Resolution on Poorna Swaraj", "Resolution on Partition of India"],
+		"correct": "Resolution on Poorna Swaraj"
+	  },
+	  {
 		"id": "27",
-		"question": "Which famous event took place on 30th January 1948?",
-		"options": ["Jallianwala Bagh massacre", "Dandi March", "Salt Satyagraha", "Assassination of Mahatma Gandhi"],
-		"correct": "Assassination of Mahatma Gandhi"
+		"question": "What was the significance of Mahatma Gandhi's visit to Champaran in 1917?",
+		"options": ["He started the Quit India Movement", "He led the Salt Satyagraha", "He initiated the Non-Cooperation Movement", "He launched the Champaran Satyagraha"],
+		"correct": "He launched the Champaran Satyagraha"
 	  },
 	  {
 		"id": "28",
-		"question": "Which famous agreement did Mahatma Gandhi sign with Lord Irwin in 1931?",
-		"options": ["Tashkent Agreement", "Simla Agreement", "Gandhi-Irwin Pact", "Lahore Agreement"],
+		"question": "Which important pact was signed between Mahatma Gandhi and Lord Irwin in 1931?",
+		"options": ["Gandhi-Irwin Pact", "Lahore Pact", "Gandhi-Nehru Pact", "Delhi Pact"],
 		"correct": "Gandhi-Irwin Pact"
 	  },
 	  {
 		"id": "29",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the British salt tax in 1930?",
-		"options": ["Quit India Movement", "Civil Disobedience Movement", "Salt Satyagraha", "Non-Cooperation Movement"],
-		"correct": "Salt Satyagraha"
+		"question": "What was the role of Mahatma Gandhi in the Bardoli Satyagraha of 1928?",
+		"options": ["He led the protest march", "He organized a nationwide strike", "He provided legal assistance to the farmers", "He started a hunger strike"],
+		"correct": "He provided leadership and guidance to the farmers"
 	  },
 	  {
 		"id": "30",
-		"question": "Which famous resolution was passed at the Lahore session of the Indian National Congress in 1929?",
-		"options": ["Quit India Resolution", "Purna Swaraj Resolution", "Dandi March Resolution", "Salt Satyagraha Resolution"],
-		"correct": "Purna Swaraj Resolution"
-	  },
-	  {
-		"id": "31",
-		"question": "Which incident inspired Mahatma Gandhi to take up the cause of indigo farmers in Champaran?",
-		"options": ["Jallianwala Bagh massacre", "Chauri Chaura incident", "Kheda Satyagraha", "Plassey incident"],
-		"correct": "Plassey incident"
-	  },
-	  {
-		"id": "32",
-		"question": "In which year did Mahatma Gandhi participate in the Kheda Satyagraha?",
-		"options": ["1915", "1917", "1919", "1922"],
-		"correct": "1918"
-	  },
-	  {
-		"id": "33",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the Rowlatt Act in 1919?",
-		"options": ["Non-Cooperation Movement", "Quit India Movement", "Khilafat Movement", "Civil Disobedience Movement"],
-		"correct": "Non-Cooperation Movement"
-	  },
-	  {
-		"id": "34",
-		"question": "Which famous slogan was coined by Mahatma Gandhi during the Quit India Movement?",
-		"options": ["Do or Die", "Swaraj is my birthright", "Satyameva Jayate", "Inquilab Zindabad"],
-		"correct": "Do or Die"
-	  },
-	  {
-		"id": "35",
-		"question": "Which organization did Mahatma Gandhi establish in 1920 to promote khadi and village industries?",
-		"options": ["Indian National Congress", "All India Trade Union Congress", "Hindustan Socialist Republican Association", "All India Spinners' Association"],
-		"correct": "All India Spinners' Association"
-	  },
-	  {
-		"id": "36",
-		"question": "Which famous event marked the beginning of the Civil Disobedience Movement in 1930?",
-		"options": ["Dandi March", "Quit India Movement", "Jallianwala Bagh massacre", "Champaran Satyagraha"],
-		"correct": "Dandi March"
-	  },
-	  {
-		"id": "37",
-		"question": "Which movement was launched by Mahatma Gandhi in support of the Khilafat movement in 1919?",
-		"options": ["Non-Cooperation Movement", "Salt Satyagraha", "Quit India Movement", "Civil Disobedience Movement"],
-		"correct": "Khilafat Movement"
-	  },
-	  {
-		"id": "38",
-		"question": "Which famous event took place on 30th January 1948?",
-		"options": ["Jallianwala Bagh massacre", "Dandi March", "Salt Satyagraha", "Assassination of Mahatma Gandhi"],
-		"correct": "Assassination of Mahatma Gandhi"
-	  },
-	  {
-		"id": "39",
-		"question": "Which famous agreement did Mahatma Gandhi sign with Lord Irwin in 1931?",
-		"options": ["Tashkent Agreement", "Simla Agreement", "Gandhi-Irwin Pact", "Lahore Agreement"],
+		"question": "Which important event marked the end of the Civil Disobedience Movement launched by Mahatma Gandhi in 1930?",
+		"options": ["Dandi March", "Salt Satyagraha", "Gandhi-Irwin Pact", "Round Table Conference"],
 		"correct": "Gandhi-Irwin Pact"
-	  },
-	  {
-		"id": "40",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the British salt tax in 1930?",
-		"options": ["Quit India Movement", "Civil Disobedience Movement", "Salt Satyagraha", "Non-Cooperation Movement"],
-		"correct": "Salt Satyagraha"
-	  },
-	  {
-		"id": "41",
-		"question": "Which famous resolution was passed at the Lahore session of the Indian National Congress in 1929?",
-		"options": ["Quit India Resolution", "Purna Swaraj Resolution", "Dandi March Resolution", "Salt Satyagraha Resolution"],
-		"correct": "Purna Swaraj Resolution"
-	  },
-	  {
-		"id": "42",
-		"question": "Which incident inspired Mahatma Gandhi to take up the cause of indigo farmers in Champaran?",
-		"options": ["Jallianwala Bagh massacre", "Chauri Chaura incident", "Kheda Satyagraha", "Plassey incident"],
-		"correct": "Plassey incident"
-	  },
-	  {
-		"id": "43",
-		"question": "In which year did Mahatma Gandhi participate in the Kheda Satyagraha?",
-		"options": ["1915", "1917", "1919", "1922"],
-		"correct": "1918"
-	  },
-	  {
-		"id": "44",
-		"question": "Which movement was launched by Mahatma Gandhi to protest against the Rowlatt Act in 1919?",
-		"options": ["Non-Cooperation Movement", "Quit India Movement", "Khilafat Movement", "Civil Disobedience Movement"],
-		"correct": "Non-Cooperation Movement"
-	  },
-	  {
-		"id": "45",
-		"question": "Which famous slogan was coined by Mahatma Gandhi during the Quit India Movement?",
-		"options": ["Do or Die", "Swaraj is my birthright", "Satyameva Jayate", "Inquilab Zindabad"],
-		"correct": "Do or Die"
-	  },
-	  {
-		"id": "46",
-		"question": "Which organization did Mahatma Gandhi establish in 1920 to promote khadi and village industries?",
-		"options": ["Indian National Congress", "All India Trade Union Congress", "Hindustan Socialist Republican Association", "All India Spinners' Association"],
-		"correct": "All India Spinners' Association"
-	  },
-	  {
-		"id": "47",
-		"question": "Which famous event marked the beginning of the Civil Disobedience Movement in 1930?",
-		"options": ["Dandi March", "Quit India Movement", "Jallianwala Bagh massacre", "Champaran Satyagraha"],
-		"correct": "Dandi March"
-	  },
-	  {
-		"id": "48",
-		"question": "Which movement was launched by Mahatma Gandhi in support of the Khilafat movement in 1919?",
-		"options": ["Non-Cooperation Movement", "Salt Satyagraha", "Quit India Movement", "Civil Disobedience Movement"],
-		"correct": "Khilafat Movement"
-	  },
-	  {
-		"id": "49",
-		"question": "Which famous event took place on 30th January 1948?",
-		"options": ["Jallianwala Bagh massacre", "Dandi March", "Salt Satyagraha", "Assassination of Mahatma Gandhi"],
-		"correct": "Assassination of Mahatma Gandhi"
-	  },
-	  {
-		"id": "50",
-		"question": "Which famous agreement did Mahatma Gandhi sign with Lord Irwin in 1931?",
-		"options": ["Tashkent Agreement", "Simla Agreement", "Gandhi-Irwin Pact", "Lahore Agreement"],
-		"correct": "Gandhi-Irwin Pact"
-	  }
+	  },{
+			"id": "31",
+			"question": "Which event led to the suspension of the Non-Cooperation Movement by Mahatma Gandhi in 1922?",
+			"options": ["Chauri Chaura incident", "Salt March", "Jallianwala Bagh massacre", "Partition of Bengal"],
+			"correct": "Chauri Chaura incident"
+		  },
+		  {
+			"id": "32",
+			"question": "What was the main objective of Mahatma Gandhi's constructive program?",
+			"options": ["Promoting communal harmony", "Promoting khadi and village industries", "Promoting women's rights", "Promoting education for all"],
+			"correct": "Promoting khadi and village industries"
+		  },
+		  {
+			"id": "33",
+			"question": "Which famous movement was started by Mahatma Gandhi in 1933 to protest against the British salt tax in India?",
+			"options": ["Quit India Movement", "Salt Satyagraha", "Dandi March", "Civil Disobedience Movement"],
+			"correct": "Salt Satyagraha"
+		  },
+		  {
+			"id": "34",
+			"question": "Which was the last major movement led by Mahatma Gandhi before India gained independence?",
+			"options": ["Quit India Movement", "Salt Satyagraha", "Non-Cooperation Movement", "Dandi March"],
+			"correct": "Quit India Movement"
+		  },
+		  {
+			"id": "35",
+			"question": "What was the significance of the Dandi March led by Mahatma Gandhi in 1930?",
+			"options": ["To demand complete independence from British rule", "To protest against the Simon Commission", "To boycott foreign goods", "To protest against the Rowlatt Act"],
+			"correct": "To protest against the Salt Tax imposed by the British"
+		  },
+		  {
+			"id": "36",
+			"question": "Which Indian leader supported Mahatma Gandhi during the Non-Cooperation Movement?",
+			"options": ["Jawaharlal Nehru", "B.R. Ambedkar", "Sardar Vallabhbhai Patel", "Subhas Chandra Bose"],
+			"correct": "Jawaharlal Nehru"
+		  },
+		  {
+			"id": "37",
+			"question": "What was the name of the satyagraha led by Mahatma Gandhi in Ahmedabad in 1918?",
+			"options": ["Bardoli Satyagraha", "Dandi March", "Ahmedabad Mill Strike", "Kheda Satyagraha"],
+			"correct": "Ahmedabad Mill Strike"
+		  },
+		  {
+			"id": "38",
+			"question": "Which important resolution was passed at the Congress session in Karachi in 1931?",
+			"options": ["Resolution on Complete Independence", "Resolution on Non-Cooperation", "Resolution on Poorna Swaraj", "Resolution on Partition of India"],
+			"correct": "Resolution on Poorna Swaraj"
+		  },
+		  {
+			"id": "39",
+			"question": "What was the role of Mahatma Gandhi in the Kheda Satyagraha of 1918?",
+			"options": ["He led the protest march", "He organized a nationwide strike", "He provided legal assistance to the farmers", "He started a hunger strike"],
+			"correct": "He provided legal assistance to the farmers"
+		  },
+		  {
+			"id": "40",
+			"question": "Which famous phrase was coined by Mahatma Gandhi to describe his philosophy of non-violent resistance?",
+			"options": ["Ahimsa", "Satyagraha", "Swadeshi", "Dharma"],
+			"correct": "Satyagraha"
+		  },
+		  {
+			"id": "41",
+			"question": "What was the role of Mahatma Gandhi in the Bardoli Satyagraha of 1928?",
+			"options": ["He led the protest march", "He organized a nationwide strike", "He provided legal assistance to the farmers", "He started a hunger strike"],
+			"correct": "He provided leadership and guidance to the farmers"
+		  },
+		  {
+			"id": "42",
+			"question": "Which important pact was signed between Mahatma Gandhi and Lord Irwin in 1931?",
+			"options": ["Gandhi-Irwin Pact", "Lahore Pact", "Gandhi-Nehru Pact", "Delhi Pact"],
+			"correct": "Gandhi-Irwin Pact"
+		  },
+		  {
+			"id": "43",
+			"question": "Who was Mahatma Gandhi's political and spiritual mentor?",
+			"options": ["Bal Gangadhar Tilak", "Gopal Krishna Gokhale", "Rabindranath Tagore", "Sardar Vallabhbhai Patel"],
+			"correct": "Gopal Krishna Gokhale"
+		  },
+		  {
+			"id": "44",
+			"question": "What was the role of Mahatma Gandhi in the Champaran Satyagraha of 1917?",
+			"options": ["He led the protest march", "He organized a nationwide strike", "He provided legal assistance to the farmers", "He started a hunger strike"],
+			"correct": "He launched the Champaran Satyagraha"
+		  },
+		  {
+			"id": "45",
+			"question": "Which organization did Mahatma Gandhi form in 1919 to support the cause of peasants and farmers?",
+			"options": ["Indian National Congress", "Khilafat Movement", "All India Traders Association", "Sabarmati Ashram"],
+			"correct": "Khilafat Movement"
+		  },
+		  {
+			"id": "46",
+			"question": "Which important event marked the end of the Civil Disobedience Movement launched by Mahatma Gandhi in 1930?",
+			"options": ["Dandi March", "Salt Satyagraha", "Gandhi-Irwin Pact", "Round Table Conference"],
+			"correct": "Gandhi-Irwin Pact"
+		  },
+		  {
+			"id": "47",
+			"question": "What was the role of Mahatma Gandhi in the Ahmedabad Mill Strike of 1918?",
+			"options": ["He led the protest march", "He organized a nationwide strike", "He provided legal assistance to the workers", "He started a hunger strike"],
+			"correct": "He provided legal assistance to the workers"
+		  },
+		  {
+			"id": "48",
+			"question": "Which event marked the beginning of Mahatma Gandhi's involvement in Indian politics?",
+			"options": ["Champaran Satyagraha", "Salt Satyagraha", "Quit India Movement", "Non-Cooperation Movement"],
+			"correct": "Champaran Satyagraha"
+		  },
+		  {
+			"id": "49",
+			"question": "What was the significance of Mahatma Gandhi's visit to Noakhali in 1946?",
+			"options": ["He started the Quit India Movement", "He led the Salt Satyagraha", "He initiated the Non-Cooperation Movement", "He promoted communal harmony"],
+			"correct": "He promoted communal harmony"
+	  
+	  
+		  },
+		  {
+			"id": "50",
+			"question": "Which important resolution was passed at the Lahore session of the Indian National Congress in 1929?",
+			"options": ["Resolution on Complete Independence", "Resolution on Non-Cooperation", "Resolution on Poorna Swaraj", "Resolution on Partition of India"],
+			"correct": "Resolution on Poorna Swaraj"
+		  }
+		
 	];
 
 
