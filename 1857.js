@@ -72,12 +72,7 @@ const quizArray = [
 				"options": ["Kanpur", "Lucknow", "Jhansi", "Allahabad"],
 				"correct": "Kanpur"
 			  },
-			  {
-				"id": 10,
-				"question": "Who was the British officer in charge of Lucknow during the Revolt of 1857?",
-				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
-				"correct": "Major General Henry Lawrence"
-			  },
+			 
 			  {
 				"id": 11,
 				"question": "Who was the Queen of Jhansi who played a prominent role in the Revolt of 1857?",
@@ -90,12 +85,7 @@ const quizArray = [
 				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
 				"correct": "Kunwar Singh"
 			  },
-			  {
-				"id": 13,
-				"question": "Who was the British officer who faced heavy resistance from the sepoys in the Siege of Lucknow?",
-				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
-				"correct": "Sir Henry Lawrence"
-			  },
+			  
 			  {
 				"id": 14,
 				"question": "Which leader from Awadh led the revolt against the British in Lucknow?",
@@ -114,54 +104,16 @@ const quizArray = [
 				"options": ["Punjab", "Bengal", "Awadh", "Delhi"],
 				"correct": "Punjab"
 			  },
-			  {
-				"id": 17,
-				"question": "Who was the British officer who famously defended the Residency in Lucknow during the Revolt of 1857?",
-				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
-				"correct": "Sir Henry Lawrence"
-			  },
+			 
 			  {
 				"id": 18,
 				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
 				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
 				"correct": "Allahabad"
 			  },
-			  {
-				"id": 19,
-				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
-				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
-				"correct": "Major General Archdale Wilson"
-			  },
-			  {
-				"id": 20,
-				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
-				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
-				"correct": "Maharana Pratap"
-			  },
-			  {
-				"id": 21,
-				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
-				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
-				"correct": "Sir Colin Campbell"
-			  },
-			  {
-				"id": 22,
-				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
-				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
-				"correct": "Begum Hazrat Mahal"
-			  },
-			  {
-				"id": 23,
-				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
-				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
-				"correct": "General Henry Havelock"
-			  },
-			  {
-				"id": 24,
-				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
-				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
-				"correct": "Rani Lakshmibai"
-			  },
+			 
+			  
+			
 			  {
 				"id": 25,
 				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
@@ -174,24 +126,9 @@ const quizArray = [
 				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
 				"correct": "Sir Henry Lawrence"
 			  },
-			  {
-				"id": 27,
-				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
-				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
-				"correct": "Tantia Tope"
-			  },
-			  {
-				"id": 28,
-				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
-				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
-				"correct": "General James Outram"
-			  },
-			  {
-				"id": 29,
-				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
-				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
-				"correct": "Allahabad"
-			  },
+			  
+			 
+			 
 			  {
 				"id": 30,
 				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
@@ -204,54 +141,19 @@ const quizArray = [
 				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
 				"correct": "Maharana Pratap"
 			  },
-			  {
-				"id": 32,
-				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
-				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
-				"correct": "Sir Colin Campbell"
-			  },
-			  {
-				"id": 33,
-				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
-				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
-				"correct": "Begum Hazrat Mahal"
-			  },
-			  {
-				"id": 34,
-				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
-				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
-				"correct": "General Henry Havelock"
-			  },
-			  {
-				"id": 35,
-				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
-				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
-				"correct": "Rani Lakshmibai"
-			  },
-			  {
-				"id": 36,
-				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
-				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
-				"correct": "Bihar"
-			  },
+			 
+			  
+			 
+			  
+			
 			  {
 				"id": 37,
 				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
 				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
 				"correct": "Sir Henry Lawrence"
 			  },
-			  {
-				"id": 38,
-				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
-				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
-				"correct": "Tantia Tope"
-			  },
-			  {
-				"id": 39,
-				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
-				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
-				"correct": "General James Outram"
-			  },
+			  
+			  
 			  {
 				"id": 40,
 				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
@@ -270,30 +172,9 @@ const quizArray = [
 				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
 				"correct": "Maharana Pratap"
 			  },
-			  {
-				"id": 43,
-				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
-				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
-				"correct": "Sir Colin Campbell"
-			  },
-			  {
-				"id": 44,
-				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
-				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
-				"correct": "Begum Hazrat Mahal"
-			  },
-			  {
-				"id": 45,
-				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
-				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
-				"correct": "General Henry Havelock"
-			  },
-			  {
-				"id": 46,
-				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
-				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
-				"correct": "Rani Lakshmibai"
-			  },
+			 
+			
+			 
 			  {
 				"id": 47,
 				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
@@ -315,8 +196,8 @@ const quizArray = [
 			  {
 				"id": 50,
 				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
-				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
-				"correct": "General James Outram"
+				"options": ["Colin Champbell", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "Colin Champbell"
 			  }
 		
 	];
