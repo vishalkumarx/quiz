@@ -113,8 +113,8 @@ const quizArray =  [{
 	  {
 		"id": "13",
 		"question": "Who was the President of the Indian National Congress during the famous Quit India Movement in 1942?",
-		"options": ["Jawaharlal Nehru", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
+		"options": ["Abul Kalam Azad", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
+		"correct": "Abul Kalam Azad"
 	  },
 	  {
 		"id": "14",
