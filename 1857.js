@@ -243,7 +243,7 @@ const quizArray = [
 		"id": "38",
 		"question": "What was the role of Mangal Pandey in the Revolt of 1857?",
 		"options": ["He led the revolt in Meerut", "He started the revolt in Jhansi", "He organized the revolt in Lucknow", "He led the revolt in Delhi"],
-		"correct": "He started the revolt in Meerut"
+		"correct": "He led the revolt in Meerut"
 	  },
 	  {
 		"id": "39",
