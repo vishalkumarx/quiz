@@ -110,7 +110,7 @@ const quizArray = [
 	  {
 		"id": "16",
 		"question": "Who was the British officer responsible for the brutal massacre of Indian soldiers and civilians in Jallianwala Bagh in 1919?",
-		"options": ["General Reginald Dyer", "Colonel James Neill", "General Dyer", "Brigadier General John Nicholson"],
+		"options": ["General Reginald Dyer", "Colonel James Neill", "Michael O' Dwyer", "Brigadier General John Nicholson"],
 		"correct": "General Reginald Dyer"
 	  },
 	  {
