@@ -18,305 +18,307 @@ let countdown;
 
 const quizArray = [ 
 	{
-		"id": "1",
-		"question": "In which year did the Revolt of 1857 take place in India?",
-		"options": ["1855", "1856", "1857", "1858"],
-		"correct": "1857"
-	  },
-	  {
-		"id": "2",
-		"question": "Which city was the center of the Revolt of 1857?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Delhi"
-	  },
-	  {
-		"id": "3",
-		"question": "Who was the last Mughal emperor of India during the time of the Revolt of 1857?",
-		"options": ["Bahadur Shah Zafar", "Shah Jahan", "Aurangzeb", "Akbar"],
-		"correct": "Bahadur Shah Zafar"
-	  },
-	  {
-		"id": "4",
-		"question": "Which regiment of the British East India Company sparked the rebellion in Meerut?",
-		"options": ["Bengal Army", "Punjab Army", "Madras Army", "Bombay Army"],
-		"correct": "Bengal Army"
-	  },
-	  {
-		"id": "5",
-		"question": "Who was the leader of the rebel forces in the city of Kanpur during the Revolt of 1857?",
-		"options": ["Rani Lakshmibai", "Nana Sahib", "Tantia Tope", "Bakht Khan"],
-		"correct": "Nana Sahib"
-	  },
-	  {
-		"id": "6",
-		"question": "Which prominent female warrior fought against the British in the city of Jhansi during the Revolt of 1857?",
-		"options": ["Rani Padmini", "Rani Lakshmibai", "Rani Durgavati", "Rani Rudrama Devi"],
-		"correct": "Rani Lakshmibai"
-	  },
-	  {
-		"id": "7",
-		"question": "What was the main cause of the Revolt of 1857?",
-		"options": ["Economic exploitation by the British", "Religious conflicts", "Political oppression", "Cultural suppression"],
-		"correct": "Political oppression"
-	  },
-	  {
-		"id": "8",
-		"question": "Who was the British Governor-General of India during the Revolt of 1857?",
-		"options": ["Lord Dalhousie", "Lord Canning", "Lord Cornwallis", "Lord Curzon"],
-		"correct": "Lord Canning"
-	  },
-	  {
-		"id": "9",
-		"question": "Which city did the British recapture from the rebel forces after a long siege during the Revolt of 1857?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Lucknow"
-	  },
-	  {
-		"id": "10",
-		"question": "Who among the following was the commander-in-chief of the rebel forces in Delhi during the Revolt of 1857?",
-		"options": ["Bakht Khan", "Tantia Tope", "Nana Sahib", "Bahadur Shah Zafar"],
-		"correct": "Bahadur Shah Zafar"
-	  },
-	  {
-		"id": "11",
-		"question": "Which event is considered as the immediate cause of the Revolt of 1857?",
-		"options": ["Introduction of the Enfield rifle", "Announcement of the Doctrine of Lapse", "Abolition of the Bengal Army", "Imposition of high taxes"],
-		"correct": "Introduction of the Enfield rifle"
-	  },
-	  {
-		"id": "12",
-		"question": "Who was the British officer in charge of the Meerut garrison, where the rebellion started?",
-		"options": ["Major General Henry Havelock", "Brigadier General John Nicholson", "Lieutenant Colonel James Neill", "Captain William Hodson"],
-		"correct": "Brigadier General John Nicholson"
-	  },
-	  {
-		"id": "13",
-		"question": "Which city became a symbol of the revolt against British rule in North India?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Delhi"
-	  },
-	  {
-		"id": "14",
-		"question": "Who was the leader of the rebel forces in Lucknow during the Revolt of 1857?",
-		"options": ["Rani Lakshmibai", "Nana Sahib", "Tantia Tope", "Begum Hazrat Mahal"],
-		"correct": "Begum Hazrat Mahal"
-	  },
-	  {
-		"id": "15",
-		"question": "What was the fate of Bahadur Shah Zafar, the last Mughal emperor, after the failure of the revolt?",
-		"options": ["Exile to Burma", "Life imprisonment", "Death by hanging", "Death in battle"],
-		"correct": "Exile to Burma"
-	  },
-	  {
-		"id": "16",
-		"question": "Who was the British officer responsible for the brutal massacre of Indian soldiers and civilians in Jallianwala Bagh in 1919?",
-		"options": ["General Reginald Dyer", "Colonel James Neill", "Michael O' Dwyer", "Brigadier General John Nicholson"],
-		"correct": "General Reginald Dyer"
-	  },
-	  {
-		"id": "17",
-		"question": "What was the role of Mangal Pandey in the Revolt of 1857?",
-		"options": ["He led the revolt in Meerut", "He started the revolt in Jhansi", "He organized the revolt in Lucknow", "He led the revolt in Delhi"],
-		"correct": "He started the revolt in Meerut"
-	  },
-	  {
-		"id": "18",
-		"question": "Which British officer played a key role in suppressing the revolt in the city of Kanpur?",
-		"options": ["Captain James Cook", "Major General Henry Havelock", "Major General Charles Napier", "Colonel James Neill"],
-		"correct": "Colonel James Neill"
-	  },
-	  {
-		"id": "19",
-		"question": "Who among the following was a prominent leader of the revolt in Bihar during the Revolt of 1857?",
-		"options": ["Kunwar Singh", "Bakht Khan", "Tantia Tope", "Rani Lakshmibai"],
-		"correct": "Kunwar Singh"
-	  },
-	  {
-		"id": "20",
-		"question": "What was the impact of the Revolt of 1857 on the British East India Company?",
-		"options": ["It led to the dissolution of the company", "It strengthened the company's control over India", "It led to the end of British rule in India", "It had no significant impact on the company"],
-		"correct": "It led to the dissolution of the company"
-	  },
-	  {
-		"id": "21",
-		"question": "Which city did the British recapture from the rebel forces after a long siege during the Revolt of 1857?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Lucknow"
-	  },
-	  {
-		"id": "22",
-		"question": "Who among the following was the commander-in-chief of the rebel forces in Delhi during the Revolt of 1857?",
-		"options": ["Bakht Khan", "Tantia Tope", "Nana Sahib", "Bahadur Shah Zafar"],
-		"correct": "Bahadur Shah Zafar"
-	  },
-	  {
-		"id": "23",
-		"question": "Which event is considered as the immediate cause of the Revolt of 1857?",
-		"options": ["Introduction of the Enfield rifle", "Announcement of the Doctrine of Lapse", "Abolition of the Bengal Army", "Imposition of high taxes"],
-		"correct": "Introduction of the Enfield rifle"
-	  },
-	  {
-		"id": "24",
-		"question": "Who was the British officer in charge of the Meerut garrison, where the rebellion started?",
-		"options": ["Major General Henry Havelock", "Brigadier General John Nicholson", "Lieutenant Colonel James Neill", "Captain William Hodson"],
-		"correct": "Brigadier General John Nicholson"
-	  },
-	  {
-		"id": "25",
-		"question": "Which city became a symbol of the revolt against British rule in North India?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Delhi"
-	  },
-	  {
-		"id": "26",
-		"question": "Who was the leader of the rebel forces in Lucknow during the Revolt of 1857?",
-		"options": ["Rani Lakshmibai", "Nana Sahib", "Tantia Tope", "Begum Hazrat Mahal"],
-		"correct": "Begum Hazrat Mahal"
-	  },
-	  {
-		"id": "27",
-		"question": "What was the fate of Bahadur Shah Zafar, the last Mughal emperor, after the failure of the revolt?",
-		"options": ["Exile to Burma", "Life imprisonment", "Death by hanging", "Death in battle"],
-		"correct": "Exile to Burma"
-	  },
-	  {
-		"id": "28",
-		"question": "Who was the British officer responsible for the brutal massacre of Indian soldiers and civilians in Jallianwala Bagh in 1919?",
-		"options": ["General Reginald Dyer", "Colonel James Neill", "General Dyer", "Brigadier General John Nicholson"],
-		"correct": "General Reginald Dyer"
-	  },
-	  {
-		"id": "29",
-		"question": "What was the role of Mangal Pandey in the Revolt of 1857?",
-		"options": ["He led the revolt in Meerut", "He started the revolt in Jhansi", "He organized the revolt in Lucknow", "He led the revolt in Delhi"],
-		"correct": "He started the revolt in Meerut"
-	  },
-	  {
-		"id": "30",
-		"question": "Which British officer played a key role in suppressing the revolt in the city of Kanpur?",
-		"options": ["Captain James Cook", "Major General Henry Havelock", "Major General Charles Napier", "Colonel James Neill"],
-		"correct": "Colonel James Neill"
-	  },
-	  {
-		"id": "31",
-		"question": "Who among the following was a prominent leader of the revolt in Bihar during the Revolt of 1857?",
-		"options": ["Kunwar Singh", "Bakht Khan", "Tantia Tope", "Rani Lakshmibai"],
-		"correct": "Kunwar Singh"
-	  },
-	  {
-		"id": "32",
-		"question": "What was the impact of the Revolt of 1857 on the British East India Company?",
-		"options": ["It led to the dissolution of the company", "It strengthened the company's control over India", "It led to the end of British rule in India", "It had no significant impact on the company"],
-		"correct": "It led to the dissolution of the company"
-	  },
-	  {
-		"id": "33",
-		"question": "Who was the British officer in charge of the Meerut garrison, where the rebellion started?",
-		"options": ["Major General Henry Havelock", "Brigadier General John Nicholson", "Lieutenant Colonel James Neill", "Captain William Hodson"],
-		"correct": "Brigadier General John Nicholson"
-	  },
-	  {
-		"id": "34",
-		"question": "Which city became a symbol of the revolt against British rule in North India?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Delhi"
-	  },
-	  {
-		"id": "35",
-		"question": "Who was the leader of the rebel forces in Lucknow during the Revolt of 1857?",
-		"options": ["Rani Lakshmibai", "Nana Sahib", "Tantia Tope", "Begum Hazrat Mahal"],
-		"correct": "Begum Hazrat Mahal"
-	  },
-	  {
-		"id": "36",
-		"question": "What was the fate of Bahadur Shah Zafar, the last Mughal emperor, after the failure of the revolt?",
-		"options": ["Exile to Burma", "Life imprisonment", "Death by hanging", "Death in battle"],
-		"correct": "Exile to Burma"
-	  },
-	  {
-		"id": "37",
-		"question": "Who was the British officer responsible for the brutal massacre of Indian soldiers and civilians in Jallianwala Bagh in 1919?",
-		"options": ["General Reginald Dyer", "Colonel James Neill", "General Dyer", "Brigadier General John Nicholson"],
-		"correct": "General Reginald Dyer"
-	  },
-	  {
-		"id": "38",
-		"question": "What was the role of Mangal Pandey in the Revolt of 1857?",
-		"options": ["He led the revolt in Meerut", "He started the revolt in Jhansi", "He organized the revolt in Lucknow", "He led the revolt in Delhi"],
-		"correct": "He led the revolt in Meerut"
-	  },
-	  {
-		"id": "39",
-		"question": "Which British officer played a key role in suppressing the revolt in the city of Kanpur?",
-		"options": ["Captain James Cook", "Major General Henry Havelock", "Major General Charles Napier", "Colonel James Neill"],
-		"correct": "Colonel James Neill"
-	  },
-	  {
-		"id": "40",
-		"question": "Who among the following was a prominent leader of the revolt in Bihar during the Revolt of 1857?",
-		"options": ["Kunwar Singh", "Bakht Khan", "Tantia Tope", "Rani Lakshmibai"],
-		"correct": "Kunwar Singh"
-	  },
-	  {
-		"id": "41",
-		"question": "What was the impact of the Revolt of 1857 on the British East India Company?",
-		"options": ["It led to the dissolution of the company", "It strengthened the company's control over India", "It led to the end of British rule in India", "It had no significant impact on the company"],
-		"correct": "It led to the dissolution of the company"
-	  },
-	  {
-		"id": "42",
-		"question": "Who was the British officer in charge of the Meerut garrison, where the rebellion started?",
-		"options": ["Major General Henry Havelock", "Brigadier General John Nicholson", "Lieutenant Colonel James Neill", "Captain William Hodson"],
-		"correct": "Brigadier General John Nicholson"
-	  },
-	  {
-		"id": "43",
-		"question": "Which city became a symbol of the revolt against British rule in North India?",
-		"options": ["Delhi", "Lucknow", "Kanpur", "Jhansi"],
-		"correct": "Delhi"
-	  },
-	  {
-		"id": "44",
-		"question": "Who was the leader of the rebel forces in Lucknow during the Revolt of 1857?",
-		"options": ["Rani Lakshmibai", "Nana Sahib", "Tantia Tope", "Begum Hazrat Mahal"],
-		"correct": "Begum Hazrat Mahal"
-	  },
-	  {
-		"id": "45",
-		"question": "What was the fate of Bahadur Shah Zafar, the last Mughal emperor, after the failure of the revolt?",
-		"options": ["Exile to Burma", "Life imprisonment", "Death by hanging", "Death in battle"],
-		"correct": "Exile to Burma"
-	  },
-	  {
-		"id": "46",
-		"question": "Who was the British officer responsible for the brutal massacre of Indian soldiers and civilians in Jallianwala Bagh in 1919?",
-		"options": ["General Reginald Dyer", "Colonel James Neill", "General Dyer", "Brigadier General John Nicholson"],
-		"correct": "General Reginald Dyer"
-	  },
-	  {
-		"id": "47",
-		"question": "What was the role of Mangal Pandey in the Revolt of 1857?",
-		"options": ["He led the revolt in Meerut", "He started the revolt in Jhansi", "He organized the revolt in Lucknow", "He led the revolt in Delhi"],
-		"correct": "He started the revolt in Meerut"
-	  },
-	  {
-		"id": "48",
-		"question": "Which British officer played a key role in suppressing the revolt in the city of Kanpur?",
-		"options": ["Captain James Cook", "Major General Henry Havelock", "Major General Charles Napier", "Colonel James Neill"],
-		"correct": "Colonel James Neill"
-	  },
-	  {
-		"id": "49",
-		"question": "Who among the following was a prominent leader of the revolt in Bihar during the Revolt of 1857?",
-		"options": ["Kunwar Singh", "Bakht Khan", "Tantia Tope", "Rani Lakshmibai"],
-		"correct": "Kunwar Singh"
-	  },
-	  {
-		"id": "50",
-		"question": "What was the impact of the Revolt of 1857 on the British East India Company?",
-		"options": ["It led to the dissolution of the company", "It strengthened the company's control over India", "It led to the end of British rule in India", "It had no significant impact on the company"],
-		"correct": "It led to the dissolution of the company"
-	  }
+			"id": 1,
+			"question": "What was the year of the Revolt of 1857?",
+			"options": ["1847", "1857", "1867", "1877"],
+			"correct": "1857"
+		  },
+		  {
+			"id": 2,
+			"question": "Who was the last Mughal emperor during the Revolt of 1857?",
+			"options": ["Bahadur Shah Zafar", "Akbar II", "Shah Alam II", "Aurangzeb"],
+			"correct": "Bahadur Shah Zafar"
+		  },
+		  {
+			"id": 3,
+			"question": "Which city played a significant role in the beginning of the Revolt of 1857?",
+			"options": ["Delhi", "Lucknow", "Kanpur", "Meerut"],
+			"correct": "Meerut"
+		  },
+		  {
+			"id": 4,
+			"question": "Who was the British Governor-General of India during the Revolt of 1857?",
+			"options": ["Lord Cornwallis", "Lord Canning", "Lord Dalhousie", "Lord Curzon"],
+			"correct": "Lord Canning"
+		  },
+		  {
+			"id": 5,
+			"question": "What was the initial spark that led to the outbreak of the Revolt of 1857?",
+			"options": ["The introduction of new Enfield rifles", "The annexation of Awadh", "The tax on salt", "The mistreatment of Indian soldiers"],
+			"correct": "The introduction of new Enfield rifles"
+		  },
+		  {
+			"id": 6,
+			"question": "Who was the Indian soldier considered as one of the main leaders of the Revolt of 1857?",
+			"options": ["Rani Lakshmibai", "Mangal Pandey", "Tantia Tope", "Bahadur Shah Zafar"],
+			"correct": "Mangal Pandey"
+		  },
+		  {
+			"id": 7,
+			"question": "Which regiment stationed at Meerut was involved in the Revolt of 1857?",
+			"options": ["Bengal Army", "Madras Army", "Bombay Army", "Punjab Army"],
+			"correct": "Bengal Army"
+		  },
+		 
+		  {
+				"id": 8,
+				"question": "Who was the British general known for his brutal suppression of the Revolt of 1857 in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 9,
+				"question": "Which city became the center of the Revolt of 1857 after Delhi?",
+				"options": ["Kanpur", "Lucknow", "Jhansi", "Allahabad"],
+				"correct": "Kanpur"
+			  },
+			  {
+				"id": 10,
+				"question": "Who was the British officer in charge of Lucknow during the Revolt of 1857?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Major General Henry Lawrence"
+			  },
+			  {
+				"id": 11,
+				"question": "Who was the Queen of Jhansi who played a prominent role in the Revolt of 1857?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 12,
+				"question": "Which leader from Bihar led a significant peasant uprising during the Revolt of 1857?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Kunwar Singh"
+			  },
+			  {
+				"id": 13,
+				"question": "Who was the British officer who faced heavy resistance from the sepoys in the Siege of Lucknow?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 14,
+				"question": "Which leader from Awadh led the revolt against the British in Lucknow?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 15,
+				"question": "What was the fate of Bahadur Shah Zafar, the last Mughal emperor, after the Revolt of 1857?",
+				"options": ["He was imprisoned in Rangoon (now Yangon)", "He was executed by the British", "He escaped to Nepal", "He lived the remainder of his life in hiding"],
+				"correct": "He was imprisoned in Rangoon (now Yangon)"
+			  },
+			  {
+				"id": 16,
+				"question": "Which region of India did the British regain control of first after the Revolt of 1857?",
+				"options": ["Punjab", "Bengal", "Awadh", "Delhi"],
+				"correct": "Punjab"
+			  },
+			  {
+				"id": 17,
+				"question": "Who was the British officer who famously defended the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 18,
+				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
+				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
+				"correct": "Allahabad"
+			  },
+			  {
+				"id": 19,
+				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
+				"correct": "Major General Archdale Wilson"
+			  },
+			  {
+				"id": 20,
+				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
+				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
+				"correct": "Maharana Pratap"
+			  },
+			  {
+				"id": 21,
+				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Sir Colin Campbell"
+			  },
+			  {
+				"id": 22,
+				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
+				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 23,
+				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 24,
+				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 25,
+				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
+				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
+				"correct": "Bihar"
+			  },
+			  {
+				"id": 26,
+				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 27,
+				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Tantia Tope"
+			  },
+			  {
+				"id": 28,
+				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General James Outram"
+			  },
+			  {
+				"id": 29,
+				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
+				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
+				"correct": "Allahabad"
+			  },
+			  {
+				"id": 30,
+				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
+				"correct": "Major General Archdale Wilson"
+			  },
+			  {
+				"id": 31,
+				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
+				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
+				"correct": "Maharana Pratap"
+			  },
+			  {
+				"id": 32,
+				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Sir Colin Campbell"
+			  },
+			  {
+				"id": 33,
+				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
+				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 34,
+				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 35,
+				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 36,
+				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
+				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
+				"correct": "Bihar"
+			  },
+			  {
+				"id": 37,
+				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 38,
+				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Tantia Tope"
+			  },
+			  {
+				"id": 39,
+				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General James Outram"
+			  },
+			  {
+				"id": 40,
+				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
+				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
+				"correct": "Allahabad"
+			  },
+			  {
+				"id": 41,
+				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
+				"correct": "Major General Archdale Wilson"
+			  },
+			  {
+				"id": 42,
+				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
+				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
+				"correct": "Maharana Pratap"
+			  },
+			  {
+				"id": 43,
+				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Sir Colin Campbell"
+			  },
+			  {
+				"id": 44,
+				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
+				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 45,
+				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 46,
+				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 47,
+				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
+				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
+				"correct": "Bihar"
+			  },
+			  {
+				"id": 48,
+				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 49,
+				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Tantia Tope"
+			  },
+			  {
+				"id": 50,
+				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General James Outram"
+			  }
+		
 	];
 
 
