@@ -1,278 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<title>Collecting Data</title>
-	<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-	</script>
-
-	<link rel="stylesheet" href=
-"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-		integrity=
-"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-		crossorigin="anonymous">
-</head>
-
-<bod
-y class="container" style="margin-top: 50px;
-	width: 50%; height:auto;">
-	
-	<h2 class="text-primary" style=
-		"margin-left: 15px; margin-bottom: 10px">
-		Hey There,Help Us In Collecting Data
-	</h2>
-	<div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-
-           
-	<form  style="width: 100%;" id="contactForm">
-		<div class="card">
-			<div class="card-body">
-                <div class="form-group">
-                    
-					<label for="exampleFormControlInput1">
-						Subject name
-					</label>
-					
-					<input type="text" class="form-control"
-					id="subjectname" placeholder="Enter subject name here">
-				</div>
-                <div class="form-group">
-                    
-					<label for="exampleFormControlInput1">
-						Quiz name
-					</label>
-					
-					<input type="text" class="form-control"
-					id="quizname" placeholder="Enter quiz name here">
-				</div>
-				<div class="form-group">
-					<label for="exampleFormControlInput1">
-						Question
-					</label>
-					
-					<!-- <input type="text" class="form-control"
-					id="question" placeholder="Enter question here"> -->
-					<textarea  class="form-control"
-					id="question" name="Text1" cols="100" rows="10"></textarea>
-				</div>
-
-				<div class="form-group">
-					<label for="exampleFormControlInput1">
-						Option A
-					</label>
-					
-					<input type="text" class="form-control"
-					id="optionA" placeholder="Option A">
-				</div>
-
-                <div class="form-group">
-					<label for="exampleFormControlInput1">
-						Option B
-					</label>
-					
-					<input type="text" class="form-control"
-					id="optionB" placeholder="Option B">
-				</div>
-
-                <div class="form-group">
-					<label for="exampleFormControlInput1">
-						Option C
-					</label>
-					
-					<input type="text" class="form-control"
-					id="optionC" placeholder="Option C">
-				</div>
-
-                <div class="form-group">
-					<label for="exampleFormControlInput1">
-						Option D
-					</label>
-					
-					<input type="text" class="form-control"
-					id="optionD" placeholder="Option D">
-				</div>
-                <div class="form-group">
-					<label for="exampleFormControlInput1">
-						Description
-					</label>
-					
-					<input type="text" class="form-control"
-					id="description" placeholder="Description">
-				</div>
-
-
-                <div class="form-group">
-
-                    <p>Please choose the correct option</p>
-
-                      <input type="radio" id="a" name="a" value="Option A">
-                      <label for="a">Option A</label><br>
-
-                      <input type="radio" id="a" name="a" value="Option B">
-                      <label for="b">Option B</label><br>
-                      <input type="radio" id="a" name="a" value="Option C">
-                      <label for="c">Option C</label><br>
-                     <input type="radio" id="a" name="a" value="Option D">
-                      <label for="d">Option D</label>
-                </div>
-			</div>
-			<button type="submit" class="btn btn-primary"
-				style="margin-left: 15px; margin-top: 10px">
-				Submit
-			</button>
-            
-		</div>
-        
-	</form>
-   
-</div>
-<div class="col-sm-6">
-    <p onclick="copy(this)">1 only</p>
-    <p onclick="copy(this)">2 only</p>
-    <p onclick="copy(this)">3 only</p>
-    <p onclick="copy(this)">4 only</p>
-    <p onclick="copy(this)">1 and 2 only</p>
-    <p onclick="copy(this)">1 and 3 only</p>
-    <p onclick="copy(this)">1 and 4 only</p>
-    <p onclick="copy(this)">2 and 3 only</p>
-    <p onclick="copy(this)">2 and 4 only</p>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
     
-    <p onclick="copy(this)">1, 2 and 3 only</p>
-    <p onclick="copy(this)">1, 2, 3 and 4</p>
-
-    <p onclick="copy(this)">Both 1 and 2</p>
-    <p onclick="copy(this)">Neither 1 nor 2</p>
-     
-    
-</div>
-</div>
-</div>
-	<script src=
-"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
-	</script>
-	
-	<script>
-     
-var firebaseConfig = {
-    apiKey: "AIzaSyD_vbk-T4bW5tw9wp2vJBz2MN_EZUJmKm4",
-
-authDomain: "quiz-d060b.firebaseapp.com",
-
-databaseURL: "https://quiz-d060b-default-rtdb.firebaseio.com",
-
-projectId: "quiz-d060b",
-
-storageBucket: "quiz-d060b.appspot.com",
-
-messagingSenderId: "130790711248",
-
-appId: "1:130790711248:web:a6a01ce5be23bcd6b4a3d5",
-
-measurementId: "G-GHR07VPB4Y"
-
-};
-
-// Initialize Firebase
-//const app = initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
-
-		firebase.initializeApp(firebaseConfig);
-
-
-       
-
-		
-		
-		document.getElementById('contactForm')
-			.addEventListener('submit', submitForm);
-
-		function submitForm(e) {
-			e.preventDefault();
-
-			// Get values
-            var subjectname = getInputVal('subjectname');
-            var quizname = getInputVal('quizname');
-       
-			var question = getInputVal('question');
-			var optionA = getInputVal('optionA');
-
-			var optionB = getInputVal('optionB');
-
-			var optionC = getInputVal('optionC');
-
-			var optionD = getInputVal('optionD');
-           var ele = document.getElementsByName('a');
-           var description = document.getElementsByName('description');
-           var answer = "";
-           for(i = 0; i < ele.length; i++) {
-                if(ele[i].checked)
-              answer = ele[i].value;
-            }
-
-			saveMessage(subjectname,quizname,question,optionA,optionB,optionC,optionD,answer,description);
-			document.getElementById('contactForm').reset();
-            document.getElementById('quizname').value=quizname;
-            
-            document.getElementById('subjectname').value=subjectname;
-            
-            
-		}
-
-		// Function to get form values
-		function getInputVal(id) {
-			return document.getElementById(id).value;
-		}
-
-		// Save message to firebase
-		function saveMessage(subjectname,quizname,question, optionA,optionB,optionC,optionD,answer,description) {
-            var messagesRef = firebase.database()
-			.ref(subjectname+"/"+quizname);
-			var newMessageRef = messagesRef.push();
-			newMessageRef.set({
-				question: question,
-				optionA: optionA,
-                optionB: optionB,
-                optionC: optionC,
-                optionD: optionD,
-                description: description,
-                answer:answer
-			});
-            alert("done...")
-		}
-        function copy(that){
-var inp =document.createElement('input');
-document.body.appendChild(inp)
-inp.value =that.textContent
-inp.select();
-document.execCommand('copy',false);
-inp.remove();
- if(document.getElementById('optionA').value.length == 0){
-
-    document.getElementById('optionA').focus();
-}else if(document.getElementById('optionB').value.length == 0){
-
-document.getElementById('optionB').focus();
-}else if(document.getElementById('optionC').value.length == 0){
-
-document.getElementById('optionC').focus();
-}else if(document.getElementById('optionD').value.length == 0){
-
-document.getElementById('optionD').focus();
-}
-
-
-}
-function appendText(){
-    document.getElementById("question").value += " National park is located in?"
-}
-
-
-
-	</script>
-</body>
-
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row" style="text-align: center;">
+        <div class="col-sm-4">
+         <a href="rivers.html" target="_blank" ><h1>Indian River System</h1></a>
+        </div><div class="col-sm-4">
+          <h1>test 2</h1>
+        </div><div class="col-sm-4">
+          <h1>test 3</h1>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
