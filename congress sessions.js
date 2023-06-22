@@ -209,14 +209,14 @@ const quizArray =  [{
 	  {
 		"id": "29",
 		"question": "Who was the President of the Indian National Congress during the famous Quit India Movement in 1942?",
-		"options": ["Jawaharlal Nehru", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
+		"options": ["Abul Kalam Azad", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
+		"correct": "Abul Kalam Azad"
 	  },
 	  {
 		"id": "30",
 		"question": "During which session of the Indian National Congress was the 'Gandhi-Irwin Pact' signed in 1931?",
-		"options": ["Karachi Session (1931)", "Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)"],
-		"correct": "Karachi Session (1931)"
+		"options": ["Karachi Session", "Lahore Session", "Bombay Session", "Madras Session"],
+		"correct": "Karachi Session"
 	  },
 	  {
 		"id": "31",
