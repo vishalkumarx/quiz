@@ -16,329 +16,313 @@ let countdown;
 
 //Questions and Options array
 
-const quizArray1 = [
-  {
-    id: "0",
-    question: "Which is the most widely spoken language in the world?",
-    options: ["Spanish", "Mandarin", "English", "German"],
-    correct: "Mandarin",
-  },
-  {
-    id: "1",
-    question: "Which is the only continent in the world without a desert?",
-    options: ["North America", "Asia", "Africa", "Europe"],
-    correct: "Europe",
-  },
-  {
-    id: "2",
-    question: "Who invented Computer?",
-    options: ["Charles Babbage", "Henry Luce", "Henry Babbage", "Charles Luce"],
-    correct: "Charles Babbage",
-  },
-];
-
-
-const quizArray =  [{
-		"id": "1",
-		"question": "When was the first session of the Indian National Congress held?",
-		"options": ["1883", "1885", "1888", "1890"],
-		"correct": "1885"
-	  },
-	  {
-		"id": "2",
-		"question": "Who was the first President of the Indian National Congress?",
-		"options": ["A.O. Hume", "Dadabhai Naoroji", "Surendranath Banerjee", "W.C. Bonnerjee"],
-		"correct": "W.C. Bonnerjee"
-	  },
-	  {
-		"id": "3",
-		"question": "In which city was the first session of the Indian National Congress held?",
-		"options": ["Bombay (Mumbai)", "Calcutta (Kolkata)", "Madras (Chennai)", "Delhi"],
-		"correct": "Bombay (Mumbai)"
-	  },
-	  {
-		"id": "4",
-		"question": "Who was the first woman president of the Indian National Congress?",
-		"options": ["Vijaya Lakshmi Pandit", "Sarojini Naidu", "Annie Besant", "Kamala Nehru"],
-		"correct": "Annie Besant"
-	  },
-	  {
-		"id": "5",
-		"question": "During which session of the Indian National Congress did the demand for 'Complete Independence' (Purna Swaraj) arise?",
-		"options": ["Lahore Session (1929)", "Lucknow Session (1916)", "Bombay Session (1885)", "Madras Session (1887)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "6",
-		"question": "Which session of the Indian National Congress witnessed the launch of the Non-Cooperation Movement by Mahatma Gandhi?",
-		"options": ["Calcutta Session (1920)", "Nagpur Session (1920)", "Amritsar Session (1919)", "Karachi Session (1931)"],
-		"correct": "Nagpur Session (1920)"
-	  },
-	  {
-		"id": "7",
-		"question": "Who was the President of the Indian National Congress during the Dandi March?",
-		"options": ["Motilal Nehru", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
-	  },
-	  {
-		"id": "8",
-		"question": "Which session of the Indian National Congress is famously known as the 'Lucknow Pact' session?",
-		"options": ["Lucknow Session (1916)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Lucknow Session (1916)"
-	  },
-	  {
-		"id": "9",
-		"question": "Who was the first Indian woman to be elected as the President of the Indian National Congress?",
-		"options": ["Vijaya Lakshmi Pandit", "Sarojini Naidu", "Annie Besant", "Kamala Nehru"],
-		"correct": "Sarojini Naidu"
-	  },
-	  {
-		"id": "10",
-		"question": "Which session of the Indian National Congress marked the declaration of the 'Poorna Swaraj' (Complete Independence) resolution?",
-		"options": ["Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)", "Calcutta Session (1906)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "11",
-		"question": "Who presided over the Karachi Session of the Indian National Congress in 1931, where the demand for a 'Constituent Assembly' was made?",
-		"options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel", "Subhash Chandra Bose"],
-		"correct": "Jawaharlal Nehru"
-	  },
-	  {
-		"id": "12",
-		"question": "Which session of the Indian National Congress witnessed the historic resolution on 'Swaraj' (Self-Governance) in 1906?",
-		"options": ["Calcutta Session (1906)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Calcutta Session (1906)"
-	  },
-	  {
-		"id": "13",
-		"question": "Who was the President of the Indian National Congress during the famous Quit India Movement in 1942?",
-		"options": ["Jawaharlal Nehru", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
-	  },
-	  {
-		"id": "14",
-		"question": "During which session of the Indian National Congress was the 'Gandhi-Irwin Pact' signed in 1931?",
-		"options": ["Karachi Session (1931)", "Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)"],
-		"correct": "Karachi Session (1931)"
-	  },
-	  {
-		"id": "15",
-		"question": "Which session of the Indian National Congress is known for the famous 'Dandi March' led by Mahatma Gandhi?",
-		"options": ["Calcutta Session (1920)", "Nagpur Session (1920)", "Amritsar Session (1919)", "Karachi Session (1931)"],
-		"correct": "Nagpur Session (1920)"
-	  },
-	  {
-		"id": "16",
-		"question": "Who was the first Indian to be elected as the President of the Indian National Congress?",
-		"options": ["A.O. Hume", "Dadabhai Naoroji", "Surendranath Banerjee", "W.C. Bonnerjee"],
-		"correct": "Dadabhai Naoroji"
-	  },
-	  {
-		"id": "17",
-		"question": "During which session of the Indian National Congress was the 'Civil Disobedience Movement' launched in 1930?",
-		"options": ["Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)", "Calcutta Session (1906)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "18",
-		"question": "Who was the first President of the Indian National Congress to be elected for three consecutive terms?",
-		"options": ["Motilal Nehru", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Jawaharlal Nehru"
-	  },
-	  {
-		"id": "19",
-		"question": "Which session of the Indian National Congress is associated with the historic 'Lucknow Pact' between the Congress and the Muslim League?",
-		"options": ["Lucknow Session (1916)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Lucknow Session (1916)"
-	  },
-	  {
-		"id": "20",
-		"question": "Who among the following was the first Indian woman to preside over a session of the Indian National Congress?",
-		"options": ["Vijaya Lakshmi Pandit", "Sarojini Naidu", "Annie Besant", "Kamala Nehru"],
-		"correct": "Annie Besant"
-	  },
-	  {
-		"id": "21",
-		"question": "During which session of the Indian National Congress did the demand for 'Complete Independence' (Purna Swaraj) arise?",
-		"options": ["Lahore Session (1929)", "Lucknow Session (1916)", "Bombay Session (1885)", "Madras Session (1887)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "22",
-		"question": "Which session of the Indian National Congress witnessed the launch of the Non-Cooperation Movement by Mahatma Gandhi?",
-		"options": ["Calcutta Session (1920)", "Nagpur Session (1920)", "Amritsar Session (1919)", "Karachi Session (1931)"],
-		"correct": "Nagpur Session (1920)"
-	  },
-	  {
-		"id": "23",
-		"question": "Who was the President of the Indian National Congress during the Dandi March?",
-		"options": ["Motilal Nehru", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
-	  },
-	  {
-		"id": "24",
-		"question": "Which session of the Indian National Congress is famously known as the 'Lucknow Pact' session?",
-		"options": ["Lucknow Session (1916)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Lucknow Session (1916)"
-	  },
-	  {
-		"id": "25",
-		"question": "Who was the first Indian woman to be elected as the President of the Indian National Congress?",
-		"options": ["Vijaya Lakshmi Pandit", "Sarojini Naidu", "Annie Besant", "Kamala Nehru"],
-		"correct": "Sarojini Naidu"
-	  },
-	  {
-		"id": "26",
-		"question": "Which session of the Indian National Congress marked the declaration of the 'Poorna Swaraj' (Complete Independence) resolution?",
-		"options": ["Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)", "Calcutta Session (1906)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "27",
-		"question": "Who presided over the Karachi Session of the Indian National Congress in 1931, where the demand for a 'Constituent Assembly' was made?",
-		"options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel", "Subhash Chandra Bose"],
-		"correct": "Jawaharlal Nehru"
-	  },
-	  {
-		"id": "28",
-		"question": "Which session of the Indian National Congress witnessed the historic resolution on 'Swaraj' (Self-Governance) in 1906?",
-		"options": ["Calcutta Session (1906)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Calcutta Session (1906)"
-	  },
-	  {
-		"id": "29",
-		"question": "Who was the President of the Indian National Congress during the famous Quit India Movement in 1942?",
-		"options": ["Abul Kalam Azad", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Abul Kalam Azad"
-	  },
-	  {
-		"id": "30",
-		"question": "During which session of the Indian National Congress was the 'Gandhi-Irwin Pact' signed in 1931?",
-		"options": ["Karachi Session", "Lahore Session", "Bombay Session", "Madras Session"],
-		"correct": "Karachi Session"
-	  },
-	  {
-		"id": "31",
-		"question": "Which session of the Indian National Congress is known for the famous 'Dandi March' led by Mahatma Gandhi?",
-		"options": ["Calcutta Session (1920)", "Nagpur Session (1920)", "Amritsar Session (1919)", "Karachi Session (1931)"],
-		"correct": "Nagpur Session (1920)"
-	  },
-	  {
-		"id": "32",
-		"question": "Who was the first Indian to be elected as the President of the Indian National Congress?",
-		"options": ["A.O. Hume", "Dadabhai Naoroji", "Surendranath Banerjee", "W.C. Bonnerjee"],
-		"correct": "Dadabhai Naoroji"
-	  },
-	  {
-		"id": "33",
-		"question": "During which session of the Indian National Congress was the 'Civil Disobedience Movement' launched in 1930?",
-		"options": ["Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)", "Calcutta Session (1906)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "34",
-		"question": "Who was the first President of the Indian National Congress to be elected for three consecutive terms?",
-		"options": ["Motilal Nehru", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Jawaharlal Nehru"
-	  },
-	  {
-		"id": "35",
-		"question": "During which session of the Indian National Congress was the 'Lucknow Pact' signed between the Congress and the Muslim League in 1916?",
-		"options": ["Lucknow Session (1916)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Lucknow Session (1916)"
-	  },
-	  {
-		"id": "36",
-		"question": "Who was the first woman to preside over a session of the Indian National Congress?",
-		"options": ["Vijaya Lakshmi Pandit", "Sarojini Naidu", "Annie Besant", "Kamala Nehru"],
-		"correct": "Annie Besant"
-	  },
-	  {
-		"id": "37",
-		"question": "During which session of the Indian National Congress did the demand for 'Complete Independence' (Purna Swaraj) arise?",
-		"options": ["Lahore Session (1929)", "Lucknow Session (1916)", "Bombay Session (1885)", "Madras Session (1887)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "38",
-		"question": "Which session of the Indian National Congress witnessed the launch of the Non-Cooperation Movement by Mahatma Gandhi?",
-		"options": ["Calcutta Session (1920)", "Nagpur Session (1920)", "Amritsar Session (1919)", "Karachi Session (1931)"],
-		"correct": "Nagpur Session (1920)"
-	  },
-	  {
-		"id": "39",
-		"question": "Who was the President of the Indian National Congress during the Dandi March?",
-		"options": ["Motilal Nehru", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
-	  },
-	  {
-		"id": "40",
-		"question": "Which session of the Indian National Congress is famously known as the 'Lucknow Pact' session?",
-		"options": ["Lucknow Session (1916)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Lucknow Session (1916)"
-	  },
-	  {
-		"id": "41",
-		"question": "Who was the first Indian woman to be elected as the President of the Indian National Congress?",
-		"options": ["Vijaya Lakshmi Pandit", "Sarojini Naidu", "Annie Besant", "Kamala Nehru"],
-		"correct": "Sarojini Naidu"
-	  },
-	  {
-		"id": "42",
-		"question": "Which session of the Indian National Congress marked the declaration of the 'Poorna Swaraj' (Complete Independence) resolution?",
-		"options": ["Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)", "Calcutta Session (1906)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "43",
-		"question": "Who presided over the Karachi Session of the Indian National Congress in 1931, where the demand for a 'Constituent Assembly' was made?",
-		"options": ["Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel", "Subhash Chandra Bose"],
-		"correct": "Jawaharlal Nehru"
-	  },
-	  {
-		"id": "44",
-		"question": "Which session of the Indian National Congress witnessed the historic resolution on 'Swaraj' (Self-Governance) in 1906?",
-		"options": ["Calcutta Session (1906)", "Lahore Session (1929)", "Madras Session (1887)", "Bombay Session (1885)"],
-		"correct": "Calcutta Session (1906)"
-	  },
-	  {
-		"id": "45",
-		"question": "Who was the President of the Indian National Congress during the famous Quit India Movement in 1942?",
-		"options": ["Jawaharlal Nehru", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Mahatma Gandhi"
-	  },
-	  {
-		"id": "46",
-		"question": "During which session of the Indian National Congress was the 'Gandhi-Irwin Pact' signed in 1931?",
-		"options": ["Karachi Session (1931)", "Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)"],
-		"correct": "Karachi Session (1931)"
-	  },
-	  {
-		"id": "47",
-		"question": "Which session of the Indian National Congress is known for the famous 'Dandi March' led by Mahatma Gandhi?",
-		"options": ["Calcutta Session (1920)", "Nagpur Session (1920)", "Amritsar Session (1919)", "Karachi Session (1931)"],
-		"correct": "Nagpur Session (1920)"
-	  },
-	  {
-		"id": "48",
-		"question": "Who was the first Indian to be elected as the President of the Indian National Congress?",
-		"options": ["A.O. Hume", "Dadabhai Naoroji", "Surendranath Banerjee", "W.C. Bonnerjee"],
-		"correct": "Dadabhai Naoroji"
-	  },
-	  {
-		"id": "49",
-		"question": "During which session of the Indian National Congress was the 'Civil Disobedience Movement' launched in 1930?",
-		"options": ["Lahore Session (1929)", "Bombay Session (1885)", "Madras Session (1887)", "Calcutta Session (1906)"],
-		"correct": "Lahore Session (1929)"
-	  },
-	  {
-		"id": "50",
-		"question": "Who was the first President of the Indian National Congress to be elected for three consecutive terms?",
-		"options": ["Motilal Nehru", "Jawaharlal Nehru", "Mahatma Gandhi", "Sardar Vallabhbhai Patel"],
-		"correct": "Jawaharlal Nehru"
-	  }
+const quizArray = [ 
+	{
+			"id": 1,
+			"question": "What was the year of the Revolt of 1857?",
+			"options": ["1847", "1857", "1867", "1877"],
+			"correct": "1857"
+		  },
+		  {
+			"id": 2,
+			"question": "Who was the last Mughal emperor during the Revolt of 1857?",
+			"options": ["Bahadur Shah Zafar", "Akbar II", "Shah Alam II", "Aurangzeb"],
+			"correct": "Bahadur Shah Zafar"
+		  },
+		  {
+			"id": 3,
+			"question": "Which city played a significant role in the beginning of the Revolt of 1857?",
+			"options": ["Delhi", "Lucknow", "Kanpur", "Meerut"],
+			"correct": "Meerut"
+		  },
+		  {
+			"id": 4,
+			"question": "Who was the British Governor-General of India during the Revolt of 1857?",
+			"options": ["Lord Cornwallis", "Lord Canning", "Lord Dalhousie", "Lord Curzon"],
+			"correct": "Lord Canning"
+		  },
+		  {
+			"id": 5,
+			"question": "What was the initial spark that led to the outbreak of the Revolt of 1857?",
+			"options": ["The introduction of new Enfield rifles", "The annexation of Awadh", "The tax on salt", "The mistreatment of Indian soldiers"],
+			"correct": "The introduction of new Enfield rifles"
+		  },
+		  {
+			"id": 6,
+			"question": "Who was the Indian soldier considered as one of the main leaders of the Revolt of 1857?",
+			"options": ["Rani Lakshmibai", "Mangal Pandey", "Tantia Tope", "Bahadur Shah Zafar"],
+			"correct": "Mangal Pandey"
+		  },
+		  {
+			"id": 7,
+			"question": "Which regiment stationed at Meerut was involved in the Revolt of 1857?",
+			"options": ["Bengal Army", "Madras Army", "Bombay Army", "Punjab Army"],
+			"correct": "Bengal Army"
+		  },
+		 
+		  {
+				"id": 8,
+				"question": "Who was the British general known for his brutal suppression of the Revolt of 1857 in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 9,
+				"question": "Which city became the center of the Revolt of 1857 after Delhi?",
+				"options": ["Kanpur", "Lucknow", "Jhansi", "Allahabad"],
+				"correct": "Kanpur"
+			  },
+			  {
+				"id": 10,
+				"question": "Who was the British officer in charge of Lucknow during the Revolt of 1857?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Major General Henry Lawrence"
+			  },
+			  {
+				"id": 11,
+				"question": "Who was the Queen of Jhansi who played a prominent role in the Revolt of 1857?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 12,
+				"question": "Which leader from Bihar led a significant peasant uprising during the Revolt of 1857?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Kunwar Singh"
+			  },
+			  {
+				"id": 13,
+				"question": "Who was the British officer who faced heavy resistance from the sepoys in the Siege of Lucknow?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 14,
+				"question": "Which leader from Awadh led the revolt against the British in Lucknow?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 15,
+				"question": "What was the fate of Bahadur Shah Zafar, the last Mughal emperor, after the Revolt of 1857?",
+				"options": ["He was imprisoned in Rangoon (now Yangon)", "He was executed by the British", "He escaped to Nepal", "He lived the remainder of his life in hiding"],
+				"correct": "He was imprisoned in Rangoon (now Yangon)"
+			  },
+			  {
+				"id": 16,
+				"question": "Which region of India did the British regain control of first after the Revolt of 1857?",
+				"options": ["Punjab", "Bengal", "Awadh", "Delhi"],
+				"correct": "Punjab"
+			  },
+			  {
+				"id": 17,
+				"question": "Who was the British officer who famously defended the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 18,
+				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
+				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
+				"correct": "Allahabad"
+			  },
+			  {
+				"id": 19,
+				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
+				"correct": "Major General Archdale Wilson"
+			  },
+			  {
+				"id": 20,
+				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
+				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
+				"correct": "Maharana Pratap"
+			  },
+			  {
+				"id": 21,
+				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Sir Colin Campbell"
+			  },
+			  {
+				"id": 22,
+				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
+				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 23,
+				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 24,
+				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 25,
+				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
+				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
+				"correct": "Bihar"
+			  },
+			  {
+				"id": 26,
+				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 27,
+				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Tantia Tope"
+			  },
+			  {
+				"id": 28,
+				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General James Outram"
+			  },
+			  {
+				"id": 29,
+				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
+				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
+				"correct": "Allahabad"
+			  },
+			  {
+				"id": 30,
+				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
+				"correct": "Major General Archdale Wilson"
+			  },
+			  {
+				"id": 31,
+				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
+				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
+				"correct": "Maharana Pratap"
+			  },
+			  {
+				"id": 32,
+				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Sir Colin Campbell"
+			  },
+			  {
+				"id": 33,
+				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
+				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 34,
+				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 35,
+				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 36,
+				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
+				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
+				"correct": "Bihar"
+			  },
+			  {
+				"id": 37,
+				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 38,
+				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Tantia Tope"
+			  },
+			  {
+				"id": 39,
+				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General James Outram"
+			  },
+			  {
+				"id": 40,
+				"question": "Which city became a major center of resistance against the British after the Revolt of 1857?",
+				"options": ["Agra", "Allahabad", "Varanasi", "Patna"],
+				"correct": "Allahabad"
+			  },
+			  {
+				"id": 41,
+				"question": "Who was the British officer in charge of the siege and capture of Delhi during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Major General Archdale Wilson", "Major General James Neill"],
+				"correct": "Major General Archdale Wilson"
+			  },
+			  {
+				"id": 42,
+				"question": "Which Indian ruler from Rajasthan provided support to the rebels during the Revolt of 1857?",
+				"options": ["Rana Sanga", "Maharana Pratap", "Rana Pratap Singh", "Rana Jodha Singh"],
+				"correct": "Maharana Pratap"
+			  },
+			  {
+				"id": 43,
+				"question": "Who was the British officer who played a key role in the recapture of Lucknow from the rebels?",
+				"options": ["Sir Colin Campbell", "Major General Henry Lawrence", "Sir Hugh Rose", "Major General James Neill"],
+				"correct": "Sir Colin Campbell"
+			  },
+			  {
+				"id": 44,
+				"question": "Who was the Indian noblewoman who led the revolt against the British in Awadh (Oudh)?",
+				"options": ["Rani Padmini", "Begum Hazrat Mahal", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Begum Hazrat Mahal"
+			  },
+			  {
+				"id": 45,
+				"question": "Which British officer played a significant role in the recapture of Kanpur from the rebels?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "General Henry Havelock"
+			  },
+			  {
+				"id": 46,
+				"question": "Who was the Indian rebel leader known as the 'Heroine of Jhansi'?",
+				"options": ["Rani Padmini", "Rani Durgavati", "Rani Jodha Bai", "Rani Lakshmibai"],
+				"correct": "Rani Lakshmibai"
+			  },
+			  {
+				"id": 47,
+				"question": "Which region of India witnessed widespread peasant uprisings during the Revolt of 1857?",
+				"options": ["Bihar", "Punjab", "Rajasthan", "Maharashtra"],
+				"correct": "Bihar"
+			  },
+			  {
+				"id": 48,
+				"question": "Who was the British officer in charge of the defense of the Residency in Lucknow during the Revolt of 1857?",
+				"options": ["General James Outram", "General Henry Havelock", "Sir Henry Lawrence", "Sir Colin Campbell"],
+				"correct": "Sir Henry Lawrence"
+			  },
+			  {
+				"id": 49,
+				"question": "Which leader from Madhya Pradesh played a crucial role in the revolt against the British?",
+				"options": ["Kunwar Singh", "Begum Hazrat Mahal", "Tantia Tope", "Nana Sahib"],
+				"correct": "Tantia Tope"
+			  },
+			  {
+				"id": 50,
+				"question": "Who was the British officer known for his brutal suppression of the revolt in Kanpur?",
+				"options": ["Lord Canning", "Lord Dalhousie", "General Henry Havelock", "General James Outram"],
+				"correct": "General James Outram"
+			  }
+		
 	];
+
+
+
   
   
   
