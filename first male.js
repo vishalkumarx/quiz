@@ -16,559 +16,558 @@ let countdown;
 
 //Questions and Options array
 
-const quizArray = [
-	{
+const quizArray = [{
 		"id": 1,
-		"question": "Which is the highest mountain peak in India?",
+		"question": "Who was the first President of India?",
 		"options": [
-		  "Kanchenjunga",
-		  "Nanda Devi",
-		  "Mount Everest",
-		  "Annapurna"
+		  "Rajendra Prasad",
+		  "Jawaharlal Nehru",
+		  "Lal Bahadur Shastri",
+		  "Indira Gandhi"
 		],
-		"correct": "Kanchenjunga"
+		"correct": "Rajendra Prasad"
 	  },
 	  {
 		"id": 2,
-		"question": "Which mountain range is known as the 'Abode of Snow'?",
+		"question": "Who was the first Prime Minister of India?",
 		"options": [
-		  "Himalayas",
-		  "Western Ghats",
-		  "Aravalli Range",
-		  "Eastern Ghats"
+		  "Jawaharlal Nehru",
+		  "Rajendra Prasad",
+		  "Lal Bahadur Shastri",
+		  "Indira Gandhi"
 		],
-		"correct": "Himalayas"
+		"correct": "Jawaharlal Nehru"
 	  },
 	  {
 		"id": 3,
-		"question": "Which hill station is known as the 'Queen of the Hills'?",
+		"question": "Who was the first Chief Justice of India?",
 		"options": [
-		  "Darjeeling",
-		  "Shimla",
-		  "Ooty",
-		  "Mussoorie"
+		  "H. J. Kania",
+		  "M. Patanjali Sastri",
+		  "Y. V. Chandrachud",
+		  "P. Sathasivam"
 		],
-		"correct": "Mussoorie"
+		"correct": "H. J. Kania"
 	  },
 	  {
 		"id": 4,
-		"question": "Which is the second highest peak in India?",
+		"question": "Who was the first Indian to win an individual Olympic gold medal?",
 		"options": [
-		  "Kangchenjunga",
-		  "Nanda Devi",
-		  "Mount Everest",
-		  "Annapurna"
+		  "Abhinav Bindra",
+		  "Dhyan Chand",
+		  "Milkha Singh",
+		  "P. T. Usha"
 		],
-		"correct": "Nanda Devi"
+		"correct": "Abhinav Bindra"
 	  },
 	  {
 		"id": 5,
-		"question": "Which state in India is home to the famous hill station 'Munnar'?",
+		"question": "Who was the first Indian to receive the Nobel Prize in Physics?",
 		"options": [
-		  "Kerala",
-		  "Tamil Nadu",
-		  "Karnataka",
-		  "Maharashtra"
+		  "C. V. Raman",
+		  "Hargobind Khorana",
+		  "Subrahmanyan Chandrasekhar",
+		  "Venkatraman Ramakrishnan"
 		],
-		"correct": "Kerala"
+		"correct": "C. V. Raman"
 	  },
 	  {
 		"id": 6,
-		"question": "Which river flows through the famous hill station 'Manali'?",
+		"question": "Who was the first Indian to receive the Bharat Ratna?",
 		"options": [
-		  "Beas",
-		  "Ganges",
-		  "Yamuna",
-		  "Sutlej"
+		  "C. Rajagopalachari",
+		  "Sarvepalli Radhakrishnan",
+		  "C. V. Raman",
+		  "Jawaharlal Nehru"
 		],
-		"correct": "Beas"
+		"correct": "C. Rajagopalachari"
 	  },
 	  {
 		"id": 7,
-		"question": "Which hill station is known as the 'Scotland of India'?",
+		"question": "Who was the first Indian to win the Booker Prize?",
 		"options": [
-		  "Coorg",
-		  "Munnar",
-		  "Kodaikanal",
-		  "Shillong"
+		  "Arundhati Roy",
+		  "Salman Rushdie",
+		  "Kiran Desai",
+		  "Aravind Adiga"
 		],
-		"correct": "Coorg"
+		"correct": "Arundhati Roy"
 	  },
 	  {
 		"id": 8,
-		"question": "Which is the highest peak in the Western Ghats?",
+		"question": "Who was the first Indian to go into space?",
 		"options": [
-		  "Anamudi",
-		  "Mullayanagiri",
-		  "Doddabetta",
-		  "Nilgiri Hills"
+		  "Rakesh Sharma",
+		  "Kalpana Chawla",
+		  "Sunita Williams",
+		  "Yuri Gagarin"
 		],
-		"correct": "Anamudi"
+		"correct": "Rakesh Sharma"
 	  },
 	  {
 		"id": 9,
-		"question": "Which state in India is home to the famous hill station 'Shimla'?",
+		"question": "Who was the first Indian to receive the Nobel Prize in Literature?",
 		"options": [
-		  "Himachal Pradesh",
-		  "Uttarakhand",
-		  "Jammu and Kashmir",
-		  "Sikkim"
+		  "Rabindranath Tagore",
+		  "C. V. Raman",
+		  "Amartya Sen",
+		  "Kailash Satyarthi"
 		],
-		"correct": "Himachal Pradesh"
+		"correct": "Rabindranath Tagore"
 	  },
 	  {
 		"id": 10,
-		"question": "Which is the highest peak in the Aravalli Range?",
+		"question": "Who was the first Indian to reach the summit of Mount Everest?",
 		"options": [
-		  "Guru Shikhar",
-		  "Mount Abu",
-		  "Kumbhalgarh",
-		  "Jaipur"
+		  "Tenzing Norgay",
+		  "Junko Tabei",
+		  "Reinhold Messner",
+		  "Edmund Hillary"
 		],
-		"correct": "Guru Shikhar"
+		"correct": "Tenzing Norgay"
 	  },
 	  {
 		"id": 11,
-		"question": "Which hill station is known as the 'Valley of Flowers'?",
+		"question": "Who was the first Indian to receive the Param Vir Chakra?",
 		"options": [
-		  "Gulmarg",
-		  "Valley of Flowers National Park",
-		  "Pahalgam",
-		  "Yusmarg"
+		  "Major Somnath Sharma",
+		  "Captain Vikram Batra",
+		  "Havildar Abdul Hamid",
+		  "Captain Manoj Kumar Pandey"
 		],
-		"correct": "Valley of Flowers National Park"
+		"correct": "Major Somnath Sharma"
 	  },
 	  {
 		"id": 12,
-		"question": "Which river flows through the famous hill station 'Ooty'?",
+		"question": "Who was the first Indian to win the Miss World title?",
 		"options": [
-		  "Cauvery",
-		  "Godavari",
-		  "Krishna",
-		  "Moyar"
+		  "Reita Faria",
+		  "Aishwarya Rai",
+		  "Priyanka Chopra",
+		  "Manushi Chhillar"
 		],
-		"correct": "Moyar"
+		"correct": "Reita Faria"
 	  },
 	  {
 		"id": 13,
-		"question": "Which is the highest peak in the Eastern Ghats?",
+		"question": "Who was the first Indian to receive the Dadasaheb Phalke Award?",
 		"options": [
-		  "Jindhagada Peak",
-		  "Arma Konda",
-		  "Maha Padav",
-		  "Mahendragiri"
+		  "Devika Rani",
+		  "Prithviraj Kapoor",
+		  "Satyajit Ray",
+		  "Raj Kapoor"
 		],
-		"correct": "Arma Konda"
+		"correct": "Devika Rani"
 	  },
 	  {
 		"id": 14,
-		"question": "Which state in India is home to the famous hill station 'Gangtok'?",
+		"question": "Who was the first Indian to win an individual Olympic silver medal?",
 		"options": [
-		  "Sikkim",
-		  "Arunachal Pradesh",
-		  "Meghalaya",
-		  "Manipur"
+		  "Rajyavardhan Singh Rathore",
+		  "Vijay Kumar",
+		  "Leander Paes",
+		  "Abhinav Bindra"
 		],
-		"correct": "Sikkim"
+		"correct": "Rajyavardhan Singh Rathore"
 	  },
 	  {
 		"id": 15,
-		"question": "Which mountain pass connects the Kullu Valley to Lahaul and Spiti Valley in Himachal Pradesh?",
+		"question": "Who was the first Indian to receive the Ramon Magsaysay Award?",
 		"options": [
-		  "Rohtang Pass",
-		  "Nathu La Pass",
-		  "Zoji La Pass",
-		  "Khardung La Pass"
+		  "Vinoba Bhave",
+		  "Mother Teresa",
+		  "C. V. Raman",
+		  "M. S. Subbulakshmi"
 		],
-		"correct": "Rohtang Pass"
+		"correct": "Vinoba Bhave"
 	  },
 	  {
 		"id": 16,
-		"question": "Which is the highest peak in the Nilgiri Hills?",
+		"question": "Who was the first Indian to win the Pulitzer Prize?",
 		"options": [
-		  "Doddabetta",
-		  "Anamudi",
-		  "Mullayanagiri",
-		  "Kodaikanal"
+		  "Jhumpa Lahiri",
+		  "Arundhati Roy",
+		  "V. S. Naipaul",
+		  "Amitav Ghosh"
 		],
-		"correct": "Doddabetta"
+		"correct": "Jhumpa Lahiri"
 	  },
 	  {
 		"id": 17,
-		"question": "Which hill station is known as the 'Kashmir of South India'?",
+		"question": "Who was the first Indian to receive the Ashoka Chakra?",
 		"options": [
-		  "Kodaikanal",
-		  "Coonoor",
-		  "Yercaud",
-		  "Munnar"
+		  "Suhas Biswas",
+		  "Neerja Bhanot",
+		  "Neerja Mishra",
+		  "Gajendra Singh Bisht"
 		],
-		"correct": "Kodaikanal"
+		"correct": "Suhas Biswas"
 	  },
 	  {
 		"id": 18,
-		"question": "Which state in India is home to the famous hill station 'Nainital'?",
+		"question": "Who was the first Indian to receive the Jnanpith Award?",
 		"options": [
-		  "Uttarakhand",
-		  "Himachal Pradesh",
-		  "Jammu and Kashmir",
-		  "Manipur"
+		  "G. Sankara Kurup",
+		  "K. Shivaram Karanth",
+		  "Birendra Kumar Bhattacharya",
+		  "U. R. Ananthamurthy"
 		],
-		"correct": "Uttarakhand"
+		"correct": "G. Sankara Kurup"
 	  },
 	  {
 		"id": 19,
-		"question": "Which river flows through the famous hill station 'Gangtok'?",
+		"question": "Who was the first Indian to win the Wimbledon singles title?",
 		"options": [
-		  "Teesta",
-		  "Brahmaputra",
-		  "Barak",
-		  "Ganges"
+		  "Mahesh Bhupathi",
+		  "Leander Paes",
+		  "Vijay Amritraj",
+		  "Ramanathan Krishnan"
 		],
-		"correct": "Teesta"
+		"correct": "Ramanathan Krishnan"
 	  },
 	  {
 		"id": 20,
-		"question": "Which is the highest peak in the Vindhya Range?",
+		"question": "Who was the first Indian to win the Bharat Ratna posthumously?",
 		"options": [
-		  "Dhoopgarh",
-		  "Amarkantak",
-		  "Mahakaleshwar",
-		  "Omkareshwar"
+		  "Lal Bahadur Shastri",
+		  "Indira Gandhi",
+		  "C. Rajagopalachari",
+		  "Vinoba Bhave"
 		],
-		"correct": "Dhoopgarh"
+		"correct": "Lal Bahadur Shastri"
 	  },
 	  {
 		"id": 21,
-		"question": "Which hill station is known as the 'Switzerland of India'?",
+		"question": "Who was the first Indian to win the Nobel Prize in Medicine?",
 		"options": [
-		  "Gulmarg",
-		  "Pahalgam",
-		  "Auli",
-		  "Shillong"
+		  "Ronald Ross",
+		  "Hargobind Khorana",
+		  "Har Gobind Khorana",
+		  "Venkatraman Ramakrishnan"
 		],
-		"correct": "Auli"
+		"correct": "Har Gobind Khorana"
 	  },
 	  {
 		"id": 22,
-		"question": "Which is the highest peak in the Satpura Range?",
+		"question": "Who was the first Indian to receive the Padma Vibhushan?",
 		"options": [
-		  "Dhupgarh",
-		  "Mahadeo Hills",
-		  "Chandragiri Hills",
-		  "Pachmarhi Hills"
+		  "Satyajit Ray",
+		  "C. V. Raman",
+		  "S. Radhakrishnan",
+		  "Jawaharlal Nehru"
 		],
-		"correct": "Dhupgarh"
+		"correct": "C. V. Raman"
 	  },
 	  {
 		"id": 23,
-		"question": "Which state in India is home to the famous hill station 'Coonoor'?",
+		"question": "Who was the first Indian to win the Rajiv Gandhi Khel Ratna Award?",
 		"options": [
-		  "Tamil Nadu",
-		  "Kerala",
-		  "Karnataka",
-		  "Andhra Pradesh"
+		  "Vishwanathan Anand",
+		  "Sachin Tendulkar",
+		  "Geet Sethi",
+		  "Kapil Dev"
 		],
-		"correct": "Tamil Nadu"
+		"correct": "Vishwanathan Anand"
 	  },
 	  {
 		"id": 24,
-		"question": "Which river flows through the famous hill station 'Kufri'?",
+		"question": "Who was the first Indian to win the Arjuna Award?",
 		"options": [
-		  "Sutlej",
-		  "Chenab",
-		  "Yamuna",
-		  "Ravi"
+		  "Devendra Jhajharia",
+		  "Milkha Singh",
+		  "Satish Pillai",
+		  "Rajyavardhan Singh Rathore"
 		],
-		"correct": "Sutlej"
+		"correct": "Milkha Singh"
 	  },
 	  {
 		"id": 25,
-		"question": "Which is the highest peak in the Javadi Hills?",
+		"question": "Who was the first Indian to win the Man Booker International Prize?",
 		"options": [
-		  "Kodikkarai Hills",
-		  "Vedaranyam Hills",
-		  "Pachamalai Hills",
-		  "Palamathi Hills"
+		  "Aravind Adiga",
+		  "Amitav Ghosh",
+		  "Salman Rushdie",
+		  "Jhumpa Lahiri"
 		],
-		"correct": "Pachamalai Hills"
+		"correct": "Aravind Adiga"
 	  },
 	  {
 		"id": 26,
-		"question": "Which hill station is known as the 'Land of Gods'?",
+		"question": "Who was the first Indian to receive the Param Vir Chakra posthumously?",
 		"options": [
-		  "Manali",
-		  "Shimla",
-		  "Dalhousie",
-		  "Mcleodganj"
+		  "Arun Khetarpal",
+		  "Nirmal Jit Singh Sekhon",
+		  "Vikram Batra",
+		  "Sanjay Kumar"
 		],
-		"correct": "Dalhousie"
+		"correct": "Arun Khetarpal"
 	  },
 	  {
 		"id": 27,
-		"question": "Which is the highest peak in the Maikal Range?",
+		"question": "Who was the first Indian to receive the Victoria Cross?",
 		"options": [
-		  "Bhander Hills",
-		  "Sirpur Hills",
-		  "Malajkhand Hills",
-		  "Bhedaghat Hills"
+		  "Khudadad Khan",
+		  "Baba Gurbachan Singh",
+		  "Lance Naik Karam Singh",
+		  "Nirmal Jit Singh Sekhon"
 		],
-		"correct": "Malajkhand Hills"
+		"correct": "Khudadad Khan"
 	  },
 	  {
 		"id": 28,
-		"question": "Which state in India is home to the famous hill station 'Auli'?",
+		"question": "Who was the first Indian to win the ICC Cricketer of the Year award?",
 		"options": [
-		  "Uttarakhand",
-		  "Himachal Pradesh",
-		  "Jammu and Kashmir",
-		  "Sikkim"
+		  "Rahul Dravid",
+		  "Virender Sehwag",
+		  "Sachin Tendulkar",
+		  "Virat Kohli"
 		],
-		"correct": "Uttarakhand"
+		"correct": "Sachin Tendulkar"
 	  },
 	  {
 		"id": 29,
-		"question": "Which river flows through the famous hill station 'Matheran'?",
+		"question": "Who was the first Indian to win the National Film Award for Best Actor?",
 		"options": [
-		  "Ulhas",
-		  "Mula",
-		  "Pavana",
-		  "Tapi"
+		  "Dilip Kumar",
+		  "Raj Kapoor",
+		  "Amitabh Bachchan",
+		  "Prithviraj Kapoor"
 		],
-		"correct": "Ulhas"
+		"correct": "Dilip Kumar"
 	  },
 	  {
 		"id": 30,
-		"question": "Which is the highest peak in the Sahyadri Range?",
+		"question": "Who was the first Indian to win an individual Olympic bronze medal?",
 		"options": [
-		  "Kalsubai",
-		  "Torna",
-		  "Harishchandragad",
-		  "Rajgad"
+		  "Karnam Malleswari",
+		  "Sushil Kumar",
+		  "Vijender Singh",
+		  "Leander Paes"
 		],
-		"correct": "Kalsubai"
+		"correct": "Karnam Malleswari"
 	  },
 	  {
 		"id": 31,
-		"question": "Which hill station is known as the 'Land of Tea Gardens'?",
+		"question": "Who was the first Indian to win the Sahitya Akademi Award?",
 		"options": [
-		  "Darjeeling",
-		  "Ooty",
-		  "Munnar",
-		  "Shillong"
+		  "Tarashankar Bandopadhyay",
+		  "Rabindranath Tagore",
+		  "Mahadevi Verma",
+		  "Premchand"
 		],
-		"correct": "Munnar"
+		"correct": "Tarashankar Bandopadhyay"
 	  },
 	  {
 		"id": 32,
-		"question": "Which is the highest peak in the Shevaroy Hills?",
+		"question": "Who was the first Indian to win the World Chess Championship?",
 		"options": [
-		  "Yercaud",
-		  "Kiliyur Falls",
-		  "Pagoda Point",
-		  "Bear's Cave"
+		  "Viswanathan Anand",
+		  "Vishwanathan Anand",
+		  "P. Harikrishna",
+		  "Pentala Harikrishna"
 		],
-		"correct": "Yercaud"
+		"correct": "Viswanathan Anand"
 	  },
 	  {
 		"id": 33,
-		"question": "Which state in India is home to the famous hill station 'Gulmarg'?",
+		"question": "Who was the first Indian to receive the Padma Shri?",
 		"options": [
-		  "Jammu and Kashmir",
-		  "Himachal Pradesh",
-		  "Uttarakhand",
-		  "Arunachal Pradesh"
+		  "K. N. Katju",
+		  "Satyajit Ray",
+		  "C. V. Raman",
+		  "S. Radhakrishnan"
 		],
-		"correct": "Jammu and Kashmir"
+		"correct": "K. N. Katju"
 	  },
 	  {
 		"id": 34,
-		"question": "Which river flows through the famous hill station 'Shillong'?",
+		"question": "Who was the first Indian to win the Arjuna Award for Athletics?",
 		"options": [
-		  "Umngot",
-		  "Gandak",
-		  "Dihing",
-		  "Umiam"
+		  "P. T. Usha",
+		  "Milkha Singh",
+		  "Dhyan Chand",
+		  "Sardar Singh"
 		],
-		"correct": "Umiam"
+		"correct": "Milkha Singh"
 	  },
 	  {
 		"id": 35,
-		"question": "Which is the highest peak in the Rajmahal Hills?",
+		"question": "Who was the first Indian to win the Rajiv Gandhi Khel Ratna Award for Athletics?",
 		"options": [
-		  "Panchakot",
-		  "Parasnath",
-		  "Kakolat",
-		  "Hazaribagh"
+		  "Viswanathan Anand",
+		  "Abhinav Bindra",
+		  "Sachin Tendulkar",
+		  "Sushil Kumar"
 		],
-		"correct": "Parasnath"
+		"correct": "Abhinav Bindra"
 	  },
 	  {
 		"id": 36,
-		"question": "Which hill station is known as the 'Queen of the Satpuras'?",
+		"question": "Who was the first Indian to receive the Arjuna Award for Athletics?",
 		"options": [
-		  "Pachmarhi",
-		  "Matheran",
-		  "Lonavala",
-		  "Mahabaleshwar"
+		  "Gurbachan Singh Randhawa",
+		  "Milkha Singh",
+		  "Anju Bobby George",
+		  "P. T. Usha"
 		],
-		"correct": "Pachmarhi"
+		"correct": "Gurbachan Singh Randhawa"
 	  },
 	  {
 		"id": 37,
-		"question": "Which is the highest peak in the Patkai Range?",
+		"question": "Who was the first Indian to receive the Dhyan Chand Award?",
 		"options": [
-		  "Kopili",
-		  "Dhola-Sadiya Bridge",
-		  "Gambhir",
-		  "Mangaldai"
+		  "Shankar Laxman",
+		  "Abdul Aziz",
+		  "Aslam Sher Khan",
+		  "Bhagwat Subramaniam Chandrasekhar"
 		],
-		"correct": "Gambhir"
+		"correct": "Shankar Laxman"
 	  },
 	  {
 		"id": 38,
-		"question": "Which state in India is home to the famous hill station 'Kodaikanal'?",
+		"question": "Who was the first Indian to receive the Padma Bhushan?",
 		"options": [
-		  "Tamil Nadu",
-		  "Kerala",
-		  "Karnataka",
-		  "Andhra Pradesh"
+		  "Satyajit Ray",
+		  "C. V. Raman",
+		  "S. Radhakrishnan",
+		  "Jawaharlal Nehru"
 		],
-		"correct": "Tamil Nadu"
+		"correct": "C. V. Raman"
 	  },
 	  {
 		"id": 39,
-		"question": "Which river flows through the famous hill station 'Coorg'?",
+		"question": "Who was the first Indian to win the Man Booker Prize?",
 		"options": [
-		  "Cauvery",
-		  "Krishna",
-		  "Godavari",
-		  "Tungabhadra"
+		  "Arundhati Roy",
+		  "Salman Rushdie",
+		  "Kiran Desai",
+		  "Aravind Adiga"
 		],
-		"correct": "Cauvery"
+		"correct": "Arundhati Roy"
 	  },
 	  {
 		"id": 40,
-		"question": "Which is the highest peak in the Garo Hills?",
+		"question": "Who was the first Indian to win the Rajiv Gandhi Khel Ratna Award for Hockey?",
 		"options": [
-		  "Nokrek Peak",
-		  "Cherrapunji",
-		  "Balpakram",
-		  "Tura Peak"
+		  "Dhanraj Pillay",
+		  "Dhyan Chand",
+		  "Viren Rasquinha",
+		  "Bir Bahadur Chhetri"
 		],
-		"correct": "Nokrek Peak"
+		"correct": "Dhanraj Pillay"
 	  },
 	  {
 		"id": 41,
-		"question": "Which hill station is known as the 'Land of Oranges'?",
+		"question": "Who was the first Indian to win the Arjuna Award for Hockey?",
 		"options": [
-		  "Nainital",
-		  "Darjeeling",
-		  "Lansdowne",
-		  "Kasauli"
+		  "Dhanraj Pillay",
+		  "Dhyan Chand",
+		  "Sandeep Singh",
+		  "Pargat Singh"
 		],
-		"correct": "Darjeeling"
+		"correct": "Dhyan Chand"
 	  },
 	  {
 		"id": 42,
-		"question": "Which is the highest peak in the Eastern Ghats?",
+		"question": "Who was the first Indian to win the Dronacharya Award?",
 		"options": [
-		  "Arma Konda",
-		  "Simlipal",
-		  "Anaimudi",
-		  "Gandhamardhan"
+		  "O. M. Nambiar",
+		  "Pullela Gopichand",
+		  "Satpal Singh",
+		  "M. P. Ganesh"
 		],
-		"correct": "Arma Konda"
+		"correct": "O. M. Nambiar"
 	  },
 	  {
 		"id": 43,
-		"question": "Which state in India is home to the famous hill station 'Yercaud'?",
+		"question": "Who was the first Indian to win the Rajiv Gandhi Khel Ratna Award for Badminton?",
 		"options": [
-		  "Tamil Nadu",
-		  "Kerala",
-		  "Karnataka",
-		  "Andhra Pradesh"
+		  "Prakash Padukone",
+		  "Saina Nehwal",
+		  "P. V. Sindhu",
+		  "Aparna Popat"
 		],
-		"correct": "Tamil Nadu"
+		"correct": "Prakash Padukone"
 	  },
 	  {
 		"id": 44,
-		"question": "Which river flows through the famous hill station 'Mcleodganj'?",
+		"question": "Who was the first Indian to win the Arjuna Award for Badminton?",
 		"options": [
-		  "Beas",
-		  "Ganges",
-		  "Yamuna",
-		  "Sutlej"
+		  "Syed Modi",
+		  "Prakash Padukone",
+		  "P. Gopichand",
+		  "Saina Nehwal"
 		],
-		"correct": "Beas"
+		"correct": "Syed Modi"
 	  },
 	  {
 		"id": 45,
-		"question": "Which is the highest peak in the Satpura Range?",
+		"question": "Who was the first Indian to receive the Rajiv Gandhi Khel Ratna Award for Boxing?",
 		"options": [
-		  "Dhupgarh",
-		  "Mahadeo Hills",
-		  "Chandragiri Hills",
-		  "Pachmarhi Hills"
+		  "Vijender Singh",
+		  "M. C. Mary Kom",
+		  "Vikas Krishan Yadav",
+		  "Sarita Devi"
 		],
-		"correct": "Dhupgarh"
+		"correct": "Vijender Singh"
 	  },
 	  {
 		"id": 46,
-		"question": "Which hill station is known as the 'Land of Coffee Plantations'?",
+		"question": "Who was the first Indian to receive the Arjuna Award for Boxing?",
 		"options": [
-		  "Coorg",
-		  "Munnar",
-		  "Kodaikanal",
-		  "Wayanad"
+		  "Vijender Singh",
+		  "Mary Kom",
+		  "Vikas Krishan Yadav",
+		  "Dingko Singh"
 		],
-		"correct": "Coorg"
+		"correct": "Dingko Singh"
 	  },
 	  {
 		"id": 47,
-		"question": "Which is the highest peak in the Aravalli Range?",
+		"question": "Who was the first Indian to win the Dronacharya Award for Boxing?",
 		"options": [
-		  "Guru Shikhar",
-		  "Mount Abu",
-		  "Kumbhalgarh",
-		  "Jaipur"
+		  "Gurbax Singh Sandhu",
+		  "Mukesh Kumar",
+		  "Satish Pillai",
+		  "Vijender Singh Beniwal"
 		],
-		"correct": "Guru Shikhar"
+		"correct": "Gurbax Singh Sandhu"
 	  },
 	  {
 		"id": 48,
-		"question": "Which state in India is home to the famous hill station 'Mahabaleshwar'?",
+		"question": "Who was the first Indian to receive the Rajiv Gandhi Khel Ratna Award for Athletics?",
 		"options": [
-		  "Maharashtra",
-		  "Goa",
-		  "Gujarat",
-		  "Rajasthan"
+		  "Viswanathan Anand",
+		  "P. T. Usha",
+		  "Milkha Singh",
+		  "Sachin Tendulkar"
 		],
-		"correct": "Maharashtra"
+		"correct": "P. T. Usha"
 	  },
 	  {
 		"id": 49,
-		"question": "Which river flows through the famous hill station 'Ooty'?",
+		"question": "Who was the first Indian to receive the Arjuna Award for Athletics?",
 		"options": [
-		  "Cauvery",
-		  "Godavari",
-		  "Krishna",
-		  "Moyar"
+		  "Milkha Singh",
+		  "P. T. Usha",
+		  "Sachin Tendulkar",
+		  "Gurbachan Singh Randhawa"
 		],
-		"correct": "Moyar"
+		"correct": "Gurbachan Singh Randhawa"
 	  },
 	  {
 		"id": 50,
-		"question": "Which is the highest peak in the Western Ghats?",
+		"question": "Who was the first Indian to receive the Dronacharya Award for Athletics?",
 		"options": [
-		  "Anamudi",
-		  "Mullayanagiri",
-		  "Doddabetta",
-		  "Nilgiri Hills"
+		  "Om Prakash Bhardwaj",
+		  "R. D. Singh",
+		  "Satyanarayana Singh",
+		  "O. M. Nambiar"
 		],
-		"correct": "Anamudi"
+		"correct": "O. M. Nambiar"
 	  }
-
-  ];
+	]
+   ;
 
 
 
